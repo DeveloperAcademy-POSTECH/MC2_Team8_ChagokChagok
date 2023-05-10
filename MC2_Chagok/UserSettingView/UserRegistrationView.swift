@@ -44,12 +44,12 @@ struct UserRegistrationView: View {
                         
                         /// 내이름 입력란
                         TextField("", text: $tylerName)
-                            .frame(width: 320, height: 50)
+                            .frame(width: 320, height: 40)
                             .background(
                                 Text("내 이름")
                                     .foregroundColor(tylerName.isEmpty ? Color(.systemGray4) : .gray)
                                     .font(tylerName.isEmpty ? .body : .caption)
-                                    .offset(y: tylerName.isEmpty ? 0 : -25)
+                                    .offset(y: tylerName.isEmpty ? 0 : -20)
                                     .animation(.easeInOut(duration: 0.3), value: tylerName.isEmpty)
                                 ,alignment: .leading
                             )
@@ -70,12 +70,12 @@ struct UserRegistrationView: View {
                         
                         /// 애인 이름 입력란
                         TextField("", text: $swiftName)
-                            .frame(width: 320, height: 50)
+                            .frame(width: 320, height: 40)
                             .background(
                                 Text("애인 이름")
                                     .foregroundColor(swiftName.isEmpty ? Color(.systemGray4) : .gray)
                                     .font(swiftName.isEmpty ? .body : .caption)
-                                    .offset(y: swiftName.isEmpty ? 0 : -25)
+                                    .offset(y: swiftName.isEmpty ? 0 : -20)
                                     .animation(.easeInOut(duration: 0.3), value: swiftName.isEmpty)
                                 ,alignment: .leading
                             )
@@ -116,6 +116,7 @@ struct UserRegistrationView: View {
                                 navigateGoalSettingView = true
                                 UserDefaults.standard.set(tylerName, forKey: "Tyler")
                                 UserDefaults.standard.set(swiftName, forKey: "Swift")
+                                UserDefaults.standard.set(true, forKey: "onBoarding")
                             }
                         }
                     }

@@ -43,7 +43,7 @@ struct UserGoalSettingView: View {
                 VStack(alignment: .leading, spacing: 0) {
                     TextField("", text: $goalMoney)
                         .foregroundColor(.clear)
-                        .frame(width: 320, height: 50)
+                        .frame(width: 320, height: 40)
                         .keyboardType(.numberPad)
                         .animation(.easeInOut(duration: 0.5), value: goalDay.timeIntervalSinceNow > 0)
                         .background(
@@ -56,7 +56,7 @@ struct UserGoalSettingView: View {
                             Text("목표 금액")
                                 .foregroundColor(goalMoney.isEmpty ? Color(.systemGray4) : .gray)
                                 .font(goalMoney.isEmpty ? .body : .caption)
-                                .offset(y: goalMoney.isEmpty ? 0 : -25)
+                                .offset(y: goalMoney.isEmpty ? 0 : -20)
                                 .animation(.easeInOut(duration: 0.3), value: goalMoney.isEmpty)
                             ,alignment: .leading
                         )

@@ -35,6 +35,10 @@ struct SaveAlertView: View {
                     .padding(.top)
                 
                 Spacer()
+                Image("SaveAlert")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 330, height: 150, alignment: .center)
                 Spacer()
                 
                 // MARK: 아래 버튼

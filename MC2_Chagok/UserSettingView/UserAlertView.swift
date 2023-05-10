@@ -41,7 +41,7 @@ struct UserAlertView: View {
                 Image("UserAlert")
                     .resizable()
                     .scaledToFit()
-                    .frame(height: 130, alignment: .center)
+                    .frame(width: 330, height: 130, alignment: .center)
                 Spacer()
                 
                 VStack(spacing: 10) {

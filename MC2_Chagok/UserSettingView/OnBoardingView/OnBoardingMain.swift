@@ -23,6 +23,7 @@ struct OnBoardingMain: View {
                 }
                 .padding(.bottom)
                 CustomButton(label: "시작하기", disable: selection != 2) {
+                    UserDefaults.standard.set(false, forKey: "onBoarding")
                     onBoarding = false
                 }
                 .padding(.bottom, 20)

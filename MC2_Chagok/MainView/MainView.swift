@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     
+    
     /// UITabBar 배경화면 베이지로 유지
     init() {
         UITabBar.appearance().backgroundColor = UIColor(Color.appBeige)
@@ -16,10 +17,13 @@ struct MainView: View {
     
     @State var userData = UserData()
     @State private var selection = 0
+    @State private var onBoarding = UserDefaults.standard.bool(forKey: "onBoarding")
     
-    /// TabView로 메인 페이지 구성
+    //    let onBoarding = UserDefaults.standard.bool(forKey: "onBoarding")
+    
     
     var body: some View {
+        /// TabView로 메인 페이지 구성
         ZStack {
             TabView(selection: $selection) {
                 HomeView()
@@ -52,6 +56,9 @@ struct MainView: View {
             /// 뷰가 로드될 때마다 userData 업데이트
             .onAppear {
                 userData = UserData()
+            }
+            .fullScreenCover(isPresented: $onBoarding) {
+                OnBoardingMain(onBoarding: $onBoarding)
             }
         }
     }

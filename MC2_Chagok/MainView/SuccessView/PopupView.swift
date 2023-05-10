@@ -1,8 +1,8 @@
 //
-//  SuccessPopupView.swift
-//  MC2_Chagok
+//  ContentView.swift
+//  popup-view
 //
-//  Created by hyunjun kim on 2023/05/11.
+//  Created by 박진영 on 2023/05/08.
 //
 
 import SwiftUI

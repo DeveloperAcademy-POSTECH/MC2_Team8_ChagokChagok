@@ -35,9 +35,12 @@
 		297D4DE12A0BD8D3000CD018 /* OnBoardingFirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4DE02A0BD8D3000CD018 /* OnBoardingFirstView.swift */; };
 		297D4DE32A0BD8E1000CD018 /* OnBoardingSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4DE22A0BD8E1000CD018 /* OnBoardingSecondView.swift */; };
 		297D4DE52A0BD8EE000CD018 /* OnBoardingThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4DE42A0BD8EE000CD018 /* OnBoardingThirdView.swift */; };
-		297D4DE72A0BF98E000CD018 /* PopupViewByClaudia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4DE62A0BF98E000CD018 /* PopupViewByClaudia.swift */; };
+		297D4DE72A0BF98E000CD018 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4DE62A0BF98E000CD018 /* PopupView.swift */; };
 		297D4DE92A0BFA51000CD018 /* FailPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4DE82A0BFA51000CD018 /* FailPopupView.swift */; };
 		297D4DEB2A0BFABA000CD018 /* SuccessPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4DEA2A0BFABA000CD018 /* SuccessPopupView.swift */; };
+		297D4DEE2A0BFB4E000CD018 /* LetterA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4DED2A0BFB4E000CD018 /* LetterA.swift */; };
+		297D4DF02A0BFB65000CD018 /* LetterB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4DEF2A0BFB65000CD018 /* LetterB.swift */; };
+		297D4DF22A0BFB70000CD018 /* LetterC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4DF12A0BFB70000CD018 /* LetterC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,9 +73,12 @@
 		297D4DE02A0BD8D3000CD018 /* OnBoardingFirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingFirstView.swift; sourceTree = "<group>"; };
 		297D4DE22A0BD8E1000CD018 /* OnBoardingSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingSecondView.swift; sourceTree = "<group>"; };
 		297D4DE42A0BD8EE000CD018 /* OnBoardingThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingThirdView.swift; sourceTree = "<group>"; };
-		297D4DE62A0BF98E000CD018 /* PopupViewByClaudia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewByClaudia.swift; sourceTree = "<group>"; };
+		297D4DE62A0BF98E000CD018 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		297D4DE82A0BFA51000CD018 /* FailPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailPopupView.swift; sourceTree = "<group>"; };
 		297D4DEA2A0BFABA000CD018 /* SuccessPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessPopupView.swift; sourceTree = "<group>"; };
+		297D4DED2A0BFB4E000CD018 /* LetterA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterA.swift; sourceTree = "<group>"; };
+		297D4DEF2A0BFB65000CD018 /* LetterB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterB.swift; sourceTree = "<group>"; };
+		297D4DF12A0BFB70000CD018 /* LetterC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +177,7 @@
 		297D4DBC2A0B7B73000CD018 /* SuccessView */ = {
 			isa = PBXGroup;
 			children = (
-				297D4DE62A0BF98E000CD018 /* PopupViewByClaudia.swift */,
+				297D4DE62A0BF98E000CD018 /* PopupView.swift */,
 				297D4DEA2A0BFABA000CD018 /* SuccessPopupView.swift */,
 			);
 			path = SuccessView;
@@ -193,6 +199,7 @@
 				297D4DC32A0B7B73000CD018 /* SavingView */,
 				297D4DBC2A0B7B73000CD018 /* SuccessView */,
 				297D4DBD2A0B7B73000CD018 /* FailView */,
+				297D4DEC2A0BFAF6000CD018 /* LetterView */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -250,6 +257,16 @@
 				297D4DC12A0B7B73000CD018 /* VideoBackGroundView.swift */,
 			);
 			path = Video;
+			sourceTree = "<group>";
+		};
+		297D4DEC2A0BFAF6000CD018 /* LetterView */ = {
+			isa = PBXGroup;
+			children = (
+				297D4DED2A0BFB4E000CD018 /* LetterA.swift */,
+				297D4DEF2A0BFB65000CD018 /* LetterB.swift */,
+				297D4DF12A0BFB70000CD018 /* LetterC.swift */,
+			);
+			path = LetterView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,16 +354,19 @@
 				297D4DE52A0BD8EE000CD018 /* OnBoardingThirdView.swift in Sources */,
 				297D4DD82A0B7B73000CD018 /* SaveMessageView.swift in Sources */,
 				297D4DB42A0B7B2D000CD018 /* UserAlertView.swift in Sources */,
-				297D4DE72A0BF98E000CD018 /* PopupViewByClaudia.swift in Sources */,
+				297D4DE72A0BF98E000CD018 /* PopupView.swift in Sources */,
 				297D4DD62A0B7B73000CD018 /* SaveMoneyView.swift in Sources */,
 				297D4DD72A0B7B73000CD018 /* SaveAlertView.swift in Sources */,
 				297D4DCF2A0B7B73000CD018 /* Triangle.swift in Sources */,
+				297D4DF02A0BFB65000CD018 /* LetterB.swift in Sources */,
 				297D4DDA2A0B7B73000CD018 /* UserDataManager.swift in Sources */,
 				297D4DDB2A0B7B73000CD018 /* Component.swift in Sources */,
+				297D4DEE2A0BFB4E000CD018 /* LetterA.swift in Sources */,
 				297D4DCE2A0B7B73000CD018 /* RoundedCross.swift in Sources */,
 				297D4DE92A0BFA51000CD018 /* FailPopupView.swift in Sources */,
 				297D4DE12A0BD8D3000CD018 /* OnBoardingFirstView.swift in Sources */,
 				297D4DB12A0B7B2D000CD018 /* UserRegistrationView.swift in Sources */,
+				297D4DF22A0BFB70000CD018 /* LetterC.swift in Sources */,
 				297D4DD52A0B7B73000CD018 /* PostboxView.swift in Sources */,
 				297D4DD02A0B7B73000CD018 /* SlimRectangle.swift in Sources */,
 				297D4DD42A0B7B73000CD018 /* VideoBackGroundView.swift in Sources */,
