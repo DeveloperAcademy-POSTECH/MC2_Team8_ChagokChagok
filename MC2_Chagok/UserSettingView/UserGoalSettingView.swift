@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct UserGoalSettingView: View {
+    @Environment(\.dismiss) var dismiss
+    
     @State private var goalMoney = ""
     @State private var goalDay = Date()
     @State private var showPicker = false
@@ -21,40 +23,59 @@ struct UserGoalSettingView: View {
         ZStack {
             Color.appBeige.ignoresSafeArea()
             VStack(alignment: .leading) {
-                Text("달성할 목표를 알려주세요")
+                Text(goalDay.timeIntervalSinceNow < 0 ? "언제까지 모아야 하나요?" : "얼마를 모아야 하나요?")
                     .frame(width: 320, alignment: .leading)
-                    .fontWeight(.semibold)
+                    .fontWeight(.bold)
                     .font(.title)
                     .padding(.top, 50)
                     .padding(.bottom, 10)
-                if goalDay.timeIntervalSinceNow > 0 {
-                    VStack(alignment: .leading, spacing: 0) {
-                        Text(goalMoney.isEmpty ? " " : "목표 금액")
-                            .font(.caption2)
-                            .animation(.easeInOut(duration: 0.5), value: goalMoney.isEmpty)
-                        TextField("목표 금액", text: $goalMoney)
-                            .frame(width: 320, height: 50)
-                            .keyboardType(.numberPad)
-                            .animation(.easeInOut(duration: 0.5), value: goalDay.timeIntervalSinceNow > 0)
-                        ZStack {
-                            Rectangle()
-                                .frame(width: 320, height: 2)
-                                .foregroundColor(Color(.systemGray5))
-                            Rectangle()
-                                .frame(width: (goalMoney.isEmpty ? 0 : 320), height: 2)
-                                .foregroundColor(goalMoney.isEmpty ? Color(.systemGray5) : .appRed)
-                                .animation(.easeInOut(duration: 0.5).delay(0.1), value: goalMoney.isEmpty)
-                        }
-                    }
-                }
                 VStack(alignment: .leading, spacing: 0) {
                     Text("목표 날짜")
                         .font(.caption2)
+                        .foregroundColor(.gray)
+                        .padding(.top)
                     DatePicker(selection: $goalDay, in: Date.now..., displayedComponents: .date) {
                     }
                     .frame(width: 110, height: 50)
                 }
-                .animation(.easeInOut(duration: 0.5), value: goalDay.timeIntervalSinceNow > 0)
+                .padding(.bottom)
+                
+                VStack(alignment: .leading, spacing: 0) {
+                    TextField("", text: $goalMoney)
+                    //                            .foregroundColor(.clear)
+                        .frame(width: 320, height: 50)
+                        .keyboardType(.numberPad)
+                        .animation(.easeInOut(duration: 0.5), value: goalDay.timeIntervalSinceNow > 0)
+                    
+                    /// 텍스트 필드 애니메이션 UI 챌린지
+                    //                            .background(
+                    //                                Text("\(goalMoney) 원")
+                    //                                    .opacity(goalMoney.isEmpty ? 0 : 1)
+                    //                                    .animation(.easeInOut(duration: 0.2), value: goalMoney.isEmpty)
+                    //                                ,alignment: .leading
+                    //                            )
+                        .background(
+                            Text("목표 금액")
+                                .foregroundColor(goalMoney.isEmpty ? Color(.systemGray4) : .gray)
+                                .font(goalMoney.isEmpty ? .body : .caption)
+                                .offset(y: goalMoney.isEmpty ? 0 : -25)
+                                .animation(.easeInOut(duration: 0.3), value: goalMoney.isEmpty)
+                            ,alignment: .leading
+                        )
+                        .background(
+                            Rectangle()
+                                .frame(width: (goalMoney.isEmpty ? 0 : 320), height: 2)
+                                .foregroundColor(goalMoney.isEmpty ? .clear : .appRed)
+                                .animation(.easeInOut(duration: 0.5).delay(0.1), value: goalMoney.isEmpty)
+                            ,alignment: .bottom
+                        )
+                        .background(
+                            Rectangle()
+                                .frame(height: 2)
+                                .foregroundColor(Color(.systemGray5))
+                            ,alignment: .bottom
+                        )
+                }
                 Spacer()
             }
             .ignoresSafeArea(.keyboard)
@@ -63,6 +84,8 @@ struct UserGoalSettingView: View {
             .navigationDestination(isPresented: $navigateContentView) {
                 MainView()
             }
+            
+            /// 네비게이션 바 Back Button Custom
             .navigationBarBackButtonHidden()
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {

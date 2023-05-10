@@ -10,28 +10,28 @@ import SwiftUI
 struct OnBoardingMain: View {
     
     @Binding var onBoarding: Bool
+    @State var selection = 0
     
     var body: some View {
         ZStack {
             Color.appBeige.ignoresSafeArea()
             VStack {
-                TabView {
-                    Text("FirstView")
-                    Text("onboarding second")
+                TabView(selection: $selection) {
+                    Text("FirstView").tag(0)
+                    Text("onboarding second").tag(1)
                     VStack {
                         Text("onboarding third")
                             .padding(.top, 60)
                         Spacer()
                     }
                     .padding(.bottom, 60)
+                    .tag(2)
                 }
                 .padding(.bottom)
-                .padding(.bottom)
-                CustomButton(label: "시작하기", disable: false) {
+                CustomButton(label: "시작하기", disable: selection != 2) {
                     onBoarding = false
                 }
-                .padding(.bottom)
-                .padding(.bottom)
+                .padding(.bottom, 40)
             }
             .tabViewStyle(.page(indexDisplayMode: .always))
             .indexViewStyle(.page(backgroundDisplayMode: .always))

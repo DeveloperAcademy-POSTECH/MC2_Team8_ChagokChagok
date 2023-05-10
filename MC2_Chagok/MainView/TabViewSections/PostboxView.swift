@@ -51,17 +51,18 @@ struct PostboxView: View {
 
 struct MessageCard: View {
     
+    @State var userData = UserData()
+    @State var open = false
+
     let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy년 MM월 dd일"
         return formatter
     }()
-    
-    @State var userData = UserData()
     let user: User
-    @State var open = false
     
     var body: some View {
+                
         VStack(alignment: .leading) {
             HStack{
                 Text(dateFormatter.string(from: user.date))

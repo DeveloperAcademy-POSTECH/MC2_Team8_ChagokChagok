@@ -20,6 +20,7 @@ struct UserRegistrationView: View {
     /// 내 이름을 입력한 뒤에 스위프트 이름을 표시하기 위한 변수입니다.
     @State private var swiftNamePopup = false
     
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -40,46 +41,56 @@ struct UserRegistrationView: View {
                     
                     
                     VStack {
-                        if swiftNamePopup == true {
-                            VStack(alignment: .leading, spacing: 0) {
-                                Text(!swiftName.isEmpty ? "애인 이름" : " ")
-                                    .font(.caption2)
-                                    .animation(.easeInOut(duration: 0.5), value: !swiftName.isEmpty)
-                                TextField("애인 이름", text: $swiftName)
-                                    .frame(width: 300, height: 50)
-                                    .animation(.easeInOut(duration: 0.5), value: !swiftName.isEmpty)
-                                    .animation(.easeOut(duration: 0.5), value: swiftNamePopup)
-                                ZStack(alignment: .bottom) {
-                                    Rectangle()
-                                        .frame(width: 300, height: 2)
-                                        .foregroundColor(Color(.systemGray5))
-                                    Rectangle()
-                                        .frame(width: (swiftName.isEmpty ? 0 : 300), height: 2)
-                                        .foregroundColor(swiftName.isEmpty ? Color(.systemGray5) : .appRed)
-                                        .animation(.easeInOut(duration: 0.5).delay(0.1), value: swiftName.isEmpty)
-                                }
-                            }
-                            .animation(.easeOut(duration: 0.5), value: swiftNamePopup)
-                        }
-                        VStack(alignment: .leading, spacing: 0) {
-                            Text(!tylerName.isEmpty ? "내 이름" : " ")
-                                .font(.caption2)
-                                .animation(.easeInOut(duration: 0.5), value: !tylerName.isEmpty)
-                            TextField("내 이름", text: $tylerName)
-                                .frame(width: 300, height: 50)
-                                .animation(.easeOut(duration: 0.5), value: !tylerName.isEmpty)
-                            ZStack(alignment: .bottom) {
+                        TextField("", text: $tylerName)
+                            .frame(width: 320, height: 50)
+                            .background(
+                                Text("내 이름")
+                                    .foregroundColor(tylerName.isEmpty ? Color(.systemGray4) : .gray)
+                                    .font(tylerName.isEmpty ? .body : .caption)
+                                    .offset(y: tylerName.isEmpty ? 0 : -25)
+                                    .animation(.easeInOut(duration: 0.3), value: tylerName.isEmpty)
+                                ,alignment: .leading
+                            )
+                            .background(
                                 Rectangle()
-                                    .frame(width: 300, height: 2)
-                                    .foregroundColor(Color(.systemGray5))
-                                Rectangle()
-                                    .frame(width: (tylerName.isEmpty ? 0 : 300), height: 2)
-                                    .foregroundColor(tylerName.isEmpty ? Color(.systemGray5) : .appRed)
+                                    .frame(width: (tylerName.isEmpty ? 0 : 320), height: 2)
+                                    .foregroundColor(tylerName.isEmpty ? .clear : .appRed)
                                     .animation(.easeInOut(duration: 0.5).delay(0.1), value: tylerName.isEmpty)
-                            }
-                        }
-                        .animation(.easeInOut(duration: 0.5), value: swiftNamePopup)
-                        .animation(.easeInOut(duration: 0.5), value: !swiftName.isEmpty)
+                                ,alignment: .bottom
+                            )
+                            .background(
+                                Rectangle()
+                                    .frame(height: 2)
+                                    .foregroundColor(Color(.systemGray5))
+                                ,alignment: .bottom
+                            )
+                            .padding(.vertical)
+                        TextField("", text: $swiftName)
+                            .frame(width: 320, height: 50)
+                            .background(
+                                Text("애인 이름")
+                                    .foregroundColor(swiftName.isEmpty ? Color(.systemGray4) : .gray)
+                                    .font(swiftName.isEmpty ? .body : .caption)
+                                    .offset(y: swiftName.isEmpty ? 0 : -25)
+                                    .animation(.easeInOut(duration: 0.3), value: swiftName.isEmpty)
+                                ,alignment: .leading
+                            )
+                            .background(
+                                Rectangle()
+                                    .frame(width: (swiftName.isEmpty ? 0 : 320), height: 2)
+                                    .foregroundColor(swiftName.isEmpty ? .clear : .appRed)
+                                    .animation(.easeInOut(duration: 0.5).delay(0.1), value: swiftName.isEmpty)
+                                ,alignment: .bottom
+                            )
+                            .background(
+                                Rectangle()
+                                    .frame(height: 2)
+                                    .foregroundColor(Color(.systemGray5))
+                                ,alignment: .bottom
+                            )
+                            .opacity(swiftNamePopup == true ? 1 : 0)
+                            .offset(y : swiftNamePopup == true ? 0 : -30)
+                            .animation(.easeInOut(duration: 0.5), value: swiftNamePopup == true)
                         Spacer()
                     }
                 }

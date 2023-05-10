@@ -26,13 +26,12 @@ struct SaveMoneyView: View {
     @State var goalMoney = UserDefaults.standard.integer(forKey: "realGoalMoney")
     @State var userData = UserData()
     
-    /// 실시간 받는 money 값을 사용하기 위한 변수, String으로 받아버렸기 때문에 옵셔널 채이닝 필요
-    /// Int값으로 입력받고 싶었지만 문제가 발생했던 것으로 기억됨 -> 추후 해결 필요
-    var savedMoney: Int {
-        return Int(money) ?? 0
-    }
-    
     var body: some View {
+        
+        /// 실시간 받는 money 값을 사용하기 위한 변수, String으로 받아버렸기 때문에 옵셔널 채이닝 필요
+        /// Int값으로 입력받고 싶었지만 문제가 발생했던 것으로 기억됨 -> 추후 해결 필요
+        let savedMoney = Int(money) ?? 0
+        
         ZStack {
             
             /// 배경설정

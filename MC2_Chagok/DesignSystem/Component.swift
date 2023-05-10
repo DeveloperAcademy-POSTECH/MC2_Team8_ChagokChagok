@@ -21,7 +21,7 @@ struct Component: View {
             }
             
             Text("This is Custom LongButton")
-            CustomLongButton(label: "Hello World", disable: false) {
+            CustomLongButton(label: "Hello World", disable: true) {
                 
             }
             
@@ -119,7 +119,7 @@ struct CustomButton: View {
                 .frame(width: 330, height: 60)
                 .background(
                     RoundedRectangle(cornerRadius: 20, style: .continuous)
-                        .fill(disable ? Color(.systemGray3) : Color.appRed)
+                        .fill(disable ? Color(.systemGray) : Color.appRed)
                         .shadow(color:Color(.systemGray3),radius: 5,y: 5)
                 )
         }
@@ -142,7 +142,7 @@ struct CustomLongButton: View {
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity)
                 .frame(height: 60)
-                .background(disable ? Color(.systemGray3) : Color.appRed)
+                .background(disable ? Color(.systemGray) : Color.appRed)
         }
         .buttonStyle(.plain)
         .disabled(disable)
