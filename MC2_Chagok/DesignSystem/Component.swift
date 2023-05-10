@@ -128,6 +128,29 @@ struct CustomButton: View {
     }
 }
 
+struct CustomBeigeButton: View {
+    
+    var label: String
+    var disable: Bool
+    var action: () -> Void
+    
+    var body: some View {
+        Button(action: action) {
+            Text(label)
+                .fontWeight(.semibold)
+                .foregroundColor(.appRed)
+                .frame(width: 330, height: 60)
+                .background(
+                    RoundedRectangle(cornerRadius: 20, style: .continuous)
+                        .fill(disable ? Color(.systemGray) : Color.appDarkBeige)
+                        .shadow(color:Color(.systemGray3),radius: 5,y: 5)
+                )
+        }
+        .buttonStyle(.plain)
+        .disabled(disable)
+    }
+}
+
 // MARK: CustomLongButton
 
 struct CustomLongButton: View {

@@ -69,7 +69,7 @@ struct MessageCard: View {
             .foregroundColor(.appRed)
             .bold()
             .padding(.bottom)
-            HStack(alignment: .top) {
+            HStack(alignment: .firstTextBaseline) {
                 Text(user.question)
                     .font(.caption)
                 Spacer()
@@ -78,13 +78,15 @@ struct MessageCard: View {
                         open.toggle()
                     }
                 } label: {
-                    Text(Image(systemName: (open ? "chevron.up" : "chevron.down")))
+                    Text(Image(systemName: "chevron.down"))
+                        .rotationEffect(open ? .degrees(180) : .degrees(0))
                         .bold()
                 }
             }
             if open == true {
                     Text(user.message)
                         .opacity(open ? 1.0 : 0.0)
+                        .padding(.top)
             }
         }
         

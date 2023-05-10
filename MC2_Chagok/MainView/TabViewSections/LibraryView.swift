@@ -15,12 +15,12 @@ struct LibraryView: View {
                 .ignoresSafeArea()
             VStack(alignment: .leading) {
                 VStack(alignment: .leading) {
-                    Text("내가 모은 우표들")
+                    Text("내가 목표 달성 기록들")
                         .font(.title2)
                         .bold()
                         .padding(.top, 30)
                         .padding(.bottom, 1)
-                    Text("목표를 달성하면 우표를 받을 수 있어요")
+                    Text("차곡차곡 채워서 잠겨있는 기록들을 깨보세요!")
                         .padding(.bottom, 20)
                         .font(.caption)
                         .foregroundColor(.appGray)
