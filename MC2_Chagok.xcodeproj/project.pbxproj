@@ -8,17 +8,61 @@
 
 /* Begin PBXBuildFile section */
 		297D4D5A2A0B593D000CD018 /* MC2_ChagokApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4D592A0B593D000CD018 /* MC2_ChagokApp.swift */; };
-		297D4D5C2A0B593D000CD018 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4D5B2A0B593D000CD018 /* ContentView.swift */; };
 		297D4D5E2A0B593E000CD018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 297D4D5D2A0B593E000CD018 /* Assets.xcassets */; };
 		297D4D612A0B593E000CD018 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 297D4D602A0B593E000CD018 /* Preview Assets.xcassets */; };
+		297D4D6E2A0B7594000CD018 /* ConfettiCannon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4D682A0B7594000CD018 /* ConfettiCannon.swift */; };
+		297D4D6F2A0B7594000CD018 /* RoundedCross.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4D6A2A0B7594000CD018 /* RoundedCross.swift */; };
+		297D4D702A0B7594000CD018 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4D6B2A0B7594000CD018 /* Triangle.swift */; };
+		297D4D712A0B7594000CD018 /* SlimRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4D6C2A0B7594000CD018 /* SlimRectangle.swift */; };
+		297D4D722A0B7594000CD018 /* ConfettiSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4D6D2A0B7594000CD018 /* ConfettiSwiftUI.swift */; };
+		297D4D8C2A0B75FC000CD018 /* SaveMoneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4D742A0B75FC000CD018 /* SaveMoneyView.swift */; };
+		297D4D8D2A0B75FC000CD018 /* SaveAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4D752A0B75FC000CD018 /* SaveAlertView.swift */; };
+		297D4D8E2A0B75FC000CD018 /* SaveMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4D762A0B75FC000CD018 /* SaveMessageView.swift */; };
+		297D4D8F2A0B75FC000CD018 /* WhenAppStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4D772A0B75FC000CD018 /* WhenAppStart.swift */; };
+		297D4D902A0B75FC000CD018 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4D7A2A0B75FC000CD018 /* Functions.swift */; };
+		297D4D912A0B75FC000CD018 /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4D7B2A0B75FC000CD018 /* UserDataManager.swift */; };
+		297D4D922A0B75FC000CD018 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4D7E2A0B75FC000CD018 /* UserInfoView.swift */; };
+		297D4D932A0B75FC000CD018 /* OnBoardingMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4D802A0B75FC000CD018 /* OnBoardingMain.swift */; };
+		297D4D942A0B75FC000CD018 /* GoalSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4D812A0B75FC000CD018 /* GoalSettingView.swift */; };
+		297D4D952A0B75FC000CD018 /* UserAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4D822A0B75FC000CD018 /* UserAlertView.swift */; };
+		297D4D962A0B75FC000CD018 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4D842A0B75FC000CD018 /* HomeView.swift */; };
+		297D4D972A0B75FC000CD018 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4D852A0B75FC000CD018 /* LibraryView.swift */; };
+		297D4D982A0B75FC000CD018 /* VideoBackGroundview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4D862A0B75FC000CD018 /* VideoBackGroundview.swift */; };
+		297D4D992A0B75FC000CD018 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4D872A0B75FC000CD018 /* MessageView.swift */; };
+		297D4D9A2A0B75FC000CD018 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4D892A0B75FC000CD018 /* Component.swift */; };
+		297D4D9B2A0B75FC000CD018 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4D8A2A0B75FC000CD018 /* Color.swift */; };
+		297D4D9C2A0B75FC000CD018 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4D8B2A0B75FC000CD018 /* ContentView.swift */; };
+		297D4D9E2A0B7629000CD018 /* WhenAppStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4D9D2A0B7629000CD018 /* WhenAppStart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		297D4D562A0B593D000CD018 /* MC2_Chagok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MC2_Chagok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		297D4D592A0B593D000CD018 /* MC2_ChagokApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC2_ChagokApp.swift; sourceTree = "<group>"; };
-		297D4D5B2A0B593D000CD018 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		297D4D5D2A0B593E000CD018 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		297D4D602A0B593E000CD018 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		297D4D682A0B7594000CD018 /* ConfettiCannon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfettiCannon.swift; sourceTree = "<group>"; };
+		297D4D6A2A0B7594000CD018 /* RoundedCross.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCross.swift; sourceTree = "<group>"; };
+		297D4D6B2A0B7594000CD018 /* Triangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		297D4D6C2A0B7594000CD018 /* SlimRectangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlimRectangle.swift; sourceTree = "<group>"; };
+		297D4D6D2A0B7594000CD018 /* ConfettiSwiftUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfettiSwiftUI.swift; sourceTree = "<group>"; };
+		297D4D742A0B75FC000CD018 /* SaveMoneyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveMoneyView.swift; sourceTree = "<group>"; };
+		297D4D752A0B75FC000CD018 /* SaveAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveAlertView.swift; sourceTree = "<group>"; };
+		297D4D762A0B75FC000CD018 /* SaveMessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveMessageView.swift; sourceTree = "<group>"; };
+		297D4D772A0B75FC000CD018 /* WhenAppStart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WhenAppStart.swift; path = ../../../myProject/ChagokChagok/ChagokChagok/WhenAppStart.swift; sourceTree = "<group>"; };
+		297D4D7A2A0B75FC000CD018 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		297D4D7B2A0B75FC000CD018 /* UserDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
+		297D4D7E2A0B75FC000CD018 /* UserInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
+		297D4D802A0B75FC000CD018 /* OnBoardingMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingMain.swift; sourceTree = "<group>"; };
+		297D4D812A0B75FC000CD018 /* GoalSettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalSettingView.swift; sourceTree = "<group>"; };
+		297D4D822A0B75FC000CD018 /* UserAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAlertView.swift; sourceTree = "<group>"; };
+		297D4D842A0B75FC000CD018 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		297D4D852A0B75FC000CD018 /* LibraryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		297D4D862A0B75FC000CD018 /* VideoBackGroundview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoBackGroundview.swift; sourceTree = "<group>"; };
+		297D4D872A0B75FC000CD018 /* MessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		297D4D892A0B75FC000CD018 /* Component.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
+		297D4D8A2A0B75FC000CD018 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		297D4D8B2A0B75FC000CD018 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = ../../../myProject/ChagokChagok/ChagokChagok/ContentView.swift; sourceTree = "<group>"; };
+		297D4D9D2A0B7629000CD018 /* WhenAppStart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WhenAppStart.swift; path = ../../../myProject/ChagokChagok/ChagokChagok/WhenAppStart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +96,18 @@
 			isa = PBXGroup;
 			children = (
 				297D4D592A0B593D000CD018 /* MC2_ChagokApp.swift */,
-				297D4D5B2A0B593D000CD018 /* ContentView.swift */,
+				297D4D9D2A0B7629000CD018 /* WhenAppStart.swift */,
+				297D4D8B2A0B75FC000CD018 /* ContentView.swift */,
+				297D4D832A0B75FC000CD018 /* MainView */,
+				297D4D732A0B75FC000CD018 /* SavingView */,
+				297D4D9F2A0B7732000CD018 /* FailView */,
+				297D4D782A0B75FC000CD018 /* SuccessView */,
+				297D4D882A0B75FC000CD018 /* DesignSystem */,
+				297D4D792A0B75FC000CD018 /* UserData */,
+				297D4D7D2A0B75FC000CD018 /* UserView */,
+				297D4D772A0B75FC000CD018 /* WhenAppStart.swift */,
 				297D4D5D2A0B593E000CD018 /* Assets.xcassets */,
+				297D4D672A0B7594000CD018 /* EffectSources */,
 				297D4D5F2A0B593E000CD018 /* Preview Content */,
 			);
 			path = MC2_Chagok;
@@ -65,6 +119,105 @@
 				297D4D602A0B593E000CD018 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		297D4D672A0B7594000CD018 /* EffectSources */ = {
+			isa = PBXGroup;
+			children = (
+				297D4D682A0B7594000CD018 /* ConfettiCannon.swift */,
+				297D4D692A0B7594000CD018 /* Shapes */,
+				297D4D6D2A0B7594000CD018 /* ConfettiSwiftUI.swift */,
+			);
+			name = EffectSources;
+			path = "../../../../Downloads/ConfettiSwiftUI-master-3/EffectSources";
+			sourceTree = "<group>";
+		};
+		297D4D692A0B7594000CD018 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				297D4D6A2A0B7594000CD018 /* RoundedCross.swift */,
+				297D4D6B2A0B7594000CD018 /* Triangle.swift */,
+				297D4D6C2A0B7594000CD018 /* SlimRectangle.swift */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
+		297D4D732A0B75FC000CD018 /* SavingView */ = {
+			isa = PBXGroup;
+			children = (
+				297D4D742A0B75FC000CD018 /* SaveMoneyView.swift */,
+				297D4D752A0B75FC000CD018 /* SaveAlertView.swift */,
+				297D4D762A0B75FC000CD018 /* SaveMessageView.swift */,
+			);
+			name = SavingView;
+			path = ../../../myProject/ChagokChagok/ChagokChagok/SavingView;
+			sourceTree = "<group>";
+		};
+		297D4D782A0B75FC000CD018 /* SuccessView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SuccessView;
+			path = ../../../myProject/ChagokChagok/ChagokChagok/SuccessView;
+			sourceTree = "<group>";
+		};
+		297D4D792A0B75FC000CD018 /* UserData */ = {
+			isa = PBXGroup;
+			children = (
+				297D4D7A2A0B75FC000CD018 /* Functions.swift */,
+				297D4D7B2A0B75FC000CD018 /* UserDataManager.swift */,
+			);
+			name = UserData;
+			path = ../../../myProject/ChagokChagok/ChagokChagok/UserData;
+			sourceTree = "<group>";
+		};
+		297D4D7D2A0B75FC000CD018 /* UserView */ = {
+			isa = PBXGroup;
+			children = (
+				297D4D7E2A0B75FC000CD018 /* UserInfoView.swift */,
+				297D4D812A0B75FC000CD018 /* GoalSettingView.swift */,
+				297D4D822A0B75FC000CD018 /* UserAlertView.swift */,
+				297D4D7F2A0B75FC000CD018 /* OnBoardingView */,
+			);
+			name = UserView;
+			path = ../../../myProject/ChagokChagok/ChagokChagok/UserView;
+			sourceTree = "<group>";
+		};
+		297D4D7F2A0B75FC000CD018 /* OnBoardingView */ = {
+			isa = PBXGroup;
+			children = (
+				297D4D802A0B75FC000CD018 /* OnBoardingMain.swift */,
+			);
+			path = OnBoardingView;
+			sourceTree = "<group>";
+		};
+		297D4D832A0B75FC000CD018 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				297D4D842A0B75FC000CD018 /* HomeView.swift */,
+				297D4D852A0B75FC000CD018 /* LibraryView.swift */,
+				297D4D862A0B75FC000CD018 /* VideoBackGroundview.swift */,
+				297D4D872A0B75FC000CD018 /* MessageView.swift */,
+			);
+			name = MainView;
+			path = ../../../myProject/ChagokChagok/ChagokChagok/MainView;
+			sourceTree = "<group>";
+		};
+		297D4D882A0B75FC000CD018 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				297D4D892A0B75FC000CD018 /* Component.swift */,
+				297D4D8A2A0B75FC000CD018 /* Color.swift */,
+			);
+			name = DesignSystem;
+			path = ../../../myProject/ChagokChagok/ChagokChagok/DesignSystem;
+			sourceTree = "<group>";
+		};
+		297D4D9F2A0B7732000CD018 /* FailView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FailView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +290,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				297D4D5C2A0B593D000CD018 /* ContentView.swift in Sources */,
+				297D4D952A0B75FC000CD018 /* UserAlertView.swift in Sources */,
+				297D4D9A2A0B75FC000CD018 /* Component.swift in Sources */,
+				297D4D8F2A0B75FC000CD018 /* WhenAppStart.swift in Sources */,
+				297D4D8D2A0B75FC000CD018 /* SaveAlertView.swift in Sources */,
+				297D4D6F2A0B7594000CD018 /* RoundedCross.swift in Sources */,
+				297D4D992A0B75FC000CD018 /* MessageView.swift in Sources */,
+				297D4D982A0B75FC000CD018 /* VideoBackGroundview.swift in Sources */,
+				297D4D972A0B75FC000CD018 /* LibraryView.swift in Sources */,
+				297D4D932A0B75FC000CD018 /* OnBoardingMain.swift in Sources */,
+				297D4D962A0B75FC000CD018 /* HomeView.swift in Sources */,
+				297D4D8C2A0B75FC000CD018 /* SaveMoneyView.swift in Sources */,
+				297D4D902A0B75FC000CD018 /* Functions.swift in Sources */,
+				297D4D8E2A0B75FC000CD018 /* SaveMessageView.swift in Sources */,
+				297D4D9B2A0B75FC000CD018 /* Color.swift in Sources */,
+				297D4D9E2A0B7629000CD018 /* WhenAppStart.swift in Sources */,
+				297D4D712A0B7594000CD018 /* SlimRectangle.swift in Sources */,
+				297D4D702A0B7594000CD018 /* Triangle.swift in Sources */,
+				297D4D912A0B75FC000CD018 /* UserDataManager.swift in Sources */,
+				297D4D9C2A0B75FC000CD018 /* ContentView.swift in Sources */,
 				297D4D5A2A0B593D000CD018 /* MC2_ChagokApp.swift in Sources */,
+				297D4D922A0B75FC000CD018 /* UserInfoView.swift in Sources */,
+				297D4D722A0B7594000CD018 /* ConfettiSwiftUI.swift in Sources */,
+				297D4D942A0B75FC000CD018 /* GoalSettingView.swift in Sources */,
+				297D4D6E2A0B7594000CD018 /* ConfettiCannon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,11 +445,14 @@
 				DEVELOPMENT_TEAM = 77745NX67K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "차곡차곡";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,11 +477,14 @@
 				DEVELOPMENT_TEAM = 77745NX67K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "차곡차곡";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

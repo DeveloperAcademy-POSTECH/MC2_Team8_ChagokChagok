@@ -11,7 +11,7 @@ import SwiftUI
 struct MC2_ChagokApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WhenAppStart()
         }
     }
 }
