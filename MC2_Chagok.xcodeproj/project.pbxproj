@@ -32,6 +32,9 @@
 		297D4DDA2A0B7B73000CD018 /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4DC92A0B7B73000CD018 /* UserDataManager.swift */; };
 		297D4DDB2A0B7B73000CD018 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4DCB2A0B7B73000CD018 /* Component.swift */; };
 		297D4DDC2A0B7B73000CD018 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4DCC2A0B7B73000CD018 /* Color.swift */; };
+		297D4DE12A0BD8D3000CD018 /* OnBoardingFirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4DE02A0BD8D3000CD018 /* OnBoardingFirstView.swift */; };
+		297D4DE32A0BD8E1000CD018 /* OnBoardingSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4DE22A0BD8E1000CD018 /* OnBoardingSecondView.swift */; };
+		297D4DE52A0BD8EE000CD018 /* OnBoardingThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4DE42A0BD8EE000CD018 /* OnBoardingThirdView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +64,9 @@
 		297D4DC92A0B7B73000CD018 /* UserDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
 		297D4DCB2A0B7B73000CD018 /* Component.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
 		297D4DCC2A0B7B73000CD018 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		297D4DE02A0BD8D3000CD018 /* OnBoardingFirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingFirstView.swift; sourceTree = "<group>"; };
+		297D4DE22A0BD8E1000CD018 /* OnBoardingSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingSecondView.swift; sourceTree = "<group>"; };
+		297D4DE42A0BD8EE000CD018 /* OnBoardingThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingThirdView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +135,9 @@
 			isa = PBXGroup;
 			children = (
 				297D4DAE2A0B7B2D000CD018 /* OnBoardingMain.swift */,
+				297D4DE02A0BD8D3000CD018 /* OnBoardingFirstView.swift */,
+				297D4DE22A0BD8E1000CD018 /* OnBoardingSecondView.swift */,
+				297D4DE42A0BD8EE000CD018 /* OnBoardingThirdView.swift */,
 			);
 			path = OnBoardingView;
 			sourceTree = "<group>";
@@ -314,6 +323,8 @@
 				297D4DAA2A0B7B15000CD018 /* WhenAppStart.swift in Sources */,
 				297D4DB22A0B7B2D000CD018 /* OnBoardingMain.swift in Sources */,
 				297D4DB32A0B7B2D000CD018 /* UserGoalSettingView.swift in Sources */,
+				297D4DE32A0BD8E1000CD018 /* OnBoardingSecondView.swift in Sources */,
+				297D4DE52A0BD8EE000CD018 /* OnBoardingThirdView.swift in Sources */,
 				297D4DD82A0B7B73000CD018 /* SaveMessageView.swift in Sources */,
 				297D4DB42A0B7B2D000CD018 /* UserAlertView.swift in Sources */,
 				297D4DD62A0B7B73000CD018 /* SaveMoneyView.swift in Sources */,
@@ -322,6 +333,7 @@
 				297D4DDA2A0B7B73000CD018 /* UserDataManager.swift in Sources */,
 				297D4DDB2A0B7B73000CD018 /* Component.swift in Sources */,
 				297D4DCE2A0B7B73000CD018 /* RoundedCross.swift in Sources */,
+				297D4DE12A0BD8D3000CD018 /* OnBoardingFirstView.swift in Sources */,
 				297D4DB12A0B7B2D000CD018 /* UserRegistrationView.swift in Sources */,
 				297D4DD52A0B7B73000CD018 /* PostboxView.swift in Sources */,
 				297D4DD02A0B7B73000CD018 /* SlimRectangle.swift in Sources */,

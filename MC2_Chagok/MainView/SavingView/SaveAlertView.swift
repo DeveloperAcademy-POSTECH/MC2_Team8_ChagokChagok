@@ -21,67 +21,56 @@ struct SaveAlertView: View {
     @State var userData = UserData()
     
     var body: some View {
-        GeometryReader { geometry in
-            ZStack {
-                Color.appBeige.ignoresSafeArea()
-                VStack(alignment: .leading) {
-                    Spacer()
-                    Spacer()
-                    Group {
-                        Text("\(Int(money) ?? 0)")
-                            .font(.largeTitle)
-                            .bold()
-                        + Text("원과 편지를\n차곡차곡\n우체통에 채워둘게요!")
-                            .font(.title)
-                            .bold()
+        ZStack {
+            Color.appBeige.ignoresSafeArea()
+            VStack(alignment: .leading) {
+                Text("\(Int(money) ?? 0)원과 편지를\n차곡차곡\n우체통에 채워둘게요!")
+                    .font(.title2)
+                    .bold()
+                    .padding(.top, 90)
+                    .padding(.bottom, 10)
+                Text("한 번 채우면 내용을 수정할 수 없어요")
+                    .foregroundColor(.appRed)
+                    .fontWeight(.semibold)
+                    .padding(.top)
+                
+                Spacer()
+                
+                // MARK: 아래 버튼
+                
+                HStack {
+                    Button {
+                        saveAlertView = false
+                    } label: {
+                        Text("다시보기")
+                            .foregroundColor(.appRed)
+                            .frame(width: 165, height: 60)
+                            .background(
+                                RoundedRectangle(cornerRadius: 20, style: .continuous)
+                                    .fill(Color.appDarkBeige)
+                                    .shadow(color:Color(.systemGray3),radius: 5,y: 5)
+                            )
                     }
-                    Text("한 번 채우면 내용을 수정할 수 없어요")
-                        .font(.title2)
-                        .foregroundColor(.appRed)
-                        .fontWeight(.semibold)
-                        .padding(.top)
-                    Group {
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
+                    Button {
+                        userData.save(message, Int(money) ?? 0, Date(), randomQuestion)
+                        UserDefaults.standard.set(nil, forKey: "SavedMoney")
+                        UserDefaults.standard.set(nil, forKey: "SavedMessage")
+                        message = ""
+                        money = ""
+                        navigateSaveMoneyView = false
+                        saveAlertView = false
+                    } label: {
+                        Text("채우기")
+                            .foregroundColor(.white)
+                            .frame(width: 165, height: 60)
+                            .background(
+                                RoundedRectangle(cornerRadius: 20, style: .continuous)
+                                    .fill(Color.appRed)
+                                    .shadow(color:Color(.systemGray3),radius: 5,y: 5)
+                            )
                     }
-                    
-                    HStack {
-                        Button {
-                            saveAlertView = false
-                        } label: {
-                            Text("다시보기")
-                                .foregroundColor(.appRed)
-                                .frame(width: 165, height: 60)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 20, style: .continuous)
-                                        .fill(Color.appDarkBeige)
-                                        .shadow(color:Color(.systemGray3),radius: 5,y: 5)
-                                )
-                        }
-                        Button {
-                            userData.save(message, Int(money) ?? 0, Date(), randomQuestion)
-                            UserDefaults.standard.set(nil, forKey: "SavedMoney")
-                            UserDefaults.standard.set(nil, forKey: "SavedMessage")
-                            message = ""
-                            money = ""
-                            navigateSaveMoneyView = false
-                            saveAlertView = false
-                        } label: {
-                            Text("채우기")
-                                .foregroundColor(.white)
-                                .frame(width: 165, height: 60)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 20, style: .continuous)
-                                        .fill(Color.appRed)
-                                        .shadow(color:Color(.systemGray3),radius: 5,y: 5)
-                                )
-                        }
-                    }
-                    Spacer()
                 }
+                .padding(.bottom, 50)
             }
         }
     }

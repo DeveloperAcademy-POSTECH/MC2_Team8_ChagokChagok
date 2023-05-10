@@ -25,7 +25,7 @@ struct SaveMoneyView: View {
     /// 기존 저장된 값과 입력된 값을 저장하기 위한 UserData
     @State var goalMoney = UserDefaults.standard.integer(forKey: "realGoalMoney")
     @State var userData = UserData()
-    
+        
     var body: some View {
         
         /// 실시간 받는 money 값을 사용하기 위한 변수, String으로 받아버렸기 때문에 옵셔널 채이닝 필요
@@ -39,55 +39,69 @@ struct SaveMoneyView: View {
             
             // MARK: View 시작
             /// spacing을 일정하게 주고 싶었지만 ZStack이 들어가 있어 일정한 Spacing 조절이 힘들어 각각 조절
-            VStack(alignment: .leading, spacing: 0) {
+            VStack(alignment: .leading) {
                 Text("오늘도 채워볼까요?")
-                    .bold()
-                    .font(.title)
-                    .padding(.top)
-                    .padding(.vertical)
-                Text(!money.isEmpty ? "채울 금액이 \(goalMoney - userData.total)원 남았어요" : " ")
-                    .font(.caption2)
-                    .animation(.easeInOut(duration: 0.5), value: !money.isEmpty)
-                ZStack(alignment: .trailing) {
-                    TextField("채울 금액", text: $money)
-                        .font(.title3)
-                        .foregroundColor(savedMoney > goalMoney ? .red : .black)
-                        .frame(width: 300, height: 50)
-                        .keyboardType(.numberPad)
-                    Text("원")
-                        .font(.title3)
-                        .padding(.trailing)
-                        .opacity(money.isEmpty ? 0 : 1)
-                        .animation(.easeInOut(duration: 0.5), value: money.isEmpty)
-                }
+                    .frame(width: 320, alignment: .leading)
+                    .fontWeight(.bold)
+                    .font(.title2)
+                    .padding(.top, 50)
+                    .padding(.bottom, 10)
                 
-                /// 뷰가 새롭게 리셋되어도 입력된 값을 그대로 유지하기 위한 설정
-                    .onDisappear {
-                        UserDefaults.standard.set(money, forKey: "SavedMoney")
-                    }
-                    .onAppear {
-                        if let SavedMoney = UserDefaults.standard.string(forKey: "SavedMoney") {
-                            money = SavedMoney
+                /// 텍스트필드와 애니메이션 영역
+                TextField("", text: $money)
+                    .foregroundColor(savedMoney > goalMoney ? .red : .black)
+                    .frame(width: 320, height: 50)
+                    .keyboardType(.numberPad)
+                    .background(
+                        Group {
+                            Text("\(money)").foregroundColor(.clear)
+                            + Text(" 원")
                         }
-                    }
-                
-                /// 바 애니메이션
-                ZStack {
-                    Rectangle()
-                        .frame(width: 300, height: 2)
-                        .foregroundColor(Color(.systemGray5))
-                    Rectangle()
-                        .foregroundColor(.appRed)
-                        .frame(width: (money.isEmpty ? 0 : 300), height: 2)
-                        .animation(.easeInOut(duration: 0.5), value: money.isEmpty)
-                }
+                            .opacity(money.isEmpty ? 0 : 1)
+                            .animation(.easeInOut(duration: 0.3), value: money.isEmpty)
+                        ,alignment: .leading
+                    )
+                    .background(
+                        Text("채울 금액")
+                            .foregroundColor(money.isEmpty ? Color(.systemGray4) : .gray)
+                            .font(money.isEmpty ? .body : .callout)
+                            .offset(y: money.isEmpty ? 0 : -30)
+                            .opacity(money.isEmpty ? 1 : 0)
+                            .animation(.easeInOut(duration: 0.3), value: money.isEmpty)
+                        ,alignment: .leading
+                    )
+                    .background(
+                        Text("채울 금액이 \(goalMoney - userData.total)원 남았어요")
+                            .foregroundColor(money.isEmpty ? Color(.systemGray4) : .gray)
+                            .font(money.isEmpty ? .body : .callout)
+                            .offset(y: money.isEmpty ? 0 : -30)
+                            .opacity(money.isEmpty ? 0 : 1)
+                            .animation(.easeInOut(duration: 0.3), value: money.isEmpty)
+                        ,alignment: .leading
+                    )
+                    .background(
+                        Rectangle()
+                            .frame(width: (money.isEmpty ? 0 : 320), height: 2)
+                            .foregroundColor(money.isEmpty ? .clear : .appRed)
+                            .animation(.easeInOut(duration: 0.5).delay(0.1), value: money.isEmpty)
+                        ,alignment: .bottom
+                    )
+                    .background(
+                        Rectangle()
+                            .frame(height: 2)
+                            .foregroundColor(Color(.systemGray5))
+                        ,alignment: .bottom
+                    )
+                    .padding(.top)
+                        
                 
                 /// 남은 금액 표시
-                Text(savedMoney > goalMoney - userData.total ? "남은 금액보다 높게 입력했어요" : " ")
-                    .foregroundColor(.red)
+                Text("남은 금액보다 높게 입력했어요")
+                    .foregroundColor(savedMoney > goalMoney - userData.total ? .red : .appBeige)
                     .font(.caption2)
                     .padding(.top, 7)
-                    .animation(.easeInOut(duration: 0.5), value: savedMoney > goalMoney - userData.total)
+                    .offset(y: savedMoney > goalMoney - userData.total ? 0 : 2)
+                    .animation(.easeIn(duration: 0.3), value: savedMoney > goalMoney - userData.total)
                 Spacer()
             }
             .navigationDestination(isPresented: $navigateSaveMessageView) {
@@ -120,6 +134,15 @@ struct SaveMoneyView: View {
             }
         }
         
+        /// 뷰가 새롭게 리셋되어도 입력된 값을 그대로 유지하기 위한 설정
+        .onDisappear {
+            UserDefaults.standard.set(money, forKey: "SavedMoney")
+        }
+        .onAppear {
+            if let SavedMoney = UserDefaults.standard.string(forKey: "SavedMoney") {
+                money = SavedMoney
+            }
+        }
         /// userData 업데이트를 하기 위함
         .onAppear {
             userData = UserData()

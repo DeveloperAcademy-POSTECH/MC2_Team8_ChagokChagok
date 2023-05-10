@@ -17,21 +17,15 @@ struct OnBoardingMain: View {
             Color.appBeige.ignoresSafeArea()
             VStack {
                 TabView(selection: $selection) {
-                    Text("FirstView").tag(0)
-                    Text("onboarding second").tag(1)
-                    VStack {
-                        Text("onboarding third")
-                            .padding(.top, 60)
-                        Spacer()
-                    }
-                    .padding(.bottom, 60)
-                    .tag(2)
+                    OnBoardingFirstView().tag(0)
+                    OnBoardingSecondView().tag(1)
+                    OnBoardingThirdView().tag(2)
                 }
                 .padding(.bottom)
                 CustomButton(label: "시작하기", disable: selection != 2) {
                     onBoarding = false
                 }
-                .padding(.bottom, 40)
+                .padding(.bottom, 20)
             }
             .tabViewStyle(.page(indexDisplayMode: .always))
             .indexViewStyle(.page(backgroundDisplayMode: .always))

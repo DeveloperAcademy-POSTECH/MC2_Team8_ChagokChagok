@@ -20,65 +20,14 @@ struct LibraryView: View {
                         .bold()
                         .padding(.top, 30)
                         .padding(.bottom, 1)
-                    Text("목표를 달성하면 편지에 붙일 우표를 드려요")
+                    Text("목표를 달성하면 우표를 받을 수 있어요")
                         .padding(.bottom, 20)
                         .font(.caption)
                         .foregroundColor(.appGray)
                 }
-                ScrollView {
-                    VStack {
-                        ForEach(0..<3) {_ in
-                            LibraryCard()
-                                .padding(.bottom)
-                                .frame(width: 380)
-                        }
-                    }
-                    .frame(width: 336)
-                }
-            }
-        }
-    }
-}
-
-struct LibraryCard: View {
-    @State var navigateLibraryDetailView = false
-    
-    var body: some View {
-        
-        Button {
-            navigateLibraryDetailView = true
-        } label: {
-            Text("This is Library View")
-                .foregroundColor(.black)
-                .frame(width: 340, height: 100)
-                .background(.regularMaterial, in : RoundedRectangle(cornerRadius: 20, style: .continuous))
-        }
-        .navigationDestination(isPresented: $navigateLibraryDetailView) {
-            LibraryDetailView(navigateLibraryDetailView: $navigateLibraryDetailView)
-        }
-    }
-}
-
-struct LibraryDetailView: View {
-    @Binding var navigateLibraryDetailView: Bool
-    
-    var body: some View {
-        ZStack {
-            Color.appBeige
-                .ignoresSafeArea()
-            VStack{
-                Text("Library Detail View")
-            }
-            .navigationBarBackButtonHidden()
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
-                        navigateLibraryDetailView = false
-                    } label: {
-                        Image(systemName: "chevron.backward")
-                            .bold()
-                    }
-                }
+                .frame(width: 330, alignment: .leading)
+                
+                Spacer()
             }
         }
     }

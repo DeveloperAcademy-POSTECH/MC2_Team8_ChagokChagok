@@ -16,9 +16,6 @@ struct PostboxView: View {
             Color.appBeige.ignoresSafeArea()
             
             VStack {
-                //                Button ("remove") {
-                //                    UserDefaults.standard.removeObject(forKey: "userData")
-                //                }
                 VStack(alignment: .leading) {
                     Text("우체통 안 편지들")
                         .font(.title2)

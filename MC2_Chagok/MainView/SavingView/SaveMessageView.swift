@@ -33,16 +33,13 @@ struct SaveMessageView: View {
             
             // MARK: View 시작
             /// spacing을 일정하게 주고 싶었지만 ZStack이 들어가 있어 일정한 Spacing 조절이 힘들어 각각 조절
-            VStack(alignment: .leading, spacing: 0) {
-                Text("편지를 채워봐요")
-                    .bold()
-                    .font(.title)
-                    .padding(.top)
-                    .padding(.vertical)
+            VStack(alignment: .leading) {
                 Text("\(randomQuestion)")
-                    .frame(width: 330, alignment: .leading)
-                    .fontWeight(.semibold)
-                    .font(.title3)
+                    .frame(width: 320, alignment: .leading)
+                    .fontWeight(.bold)
+                    .font(.title2)
+                    .padding(.top, 50)
+                    .padding(.bottom, 10)
                 
                 /// 텍스트 필드 뷰
                 ZStack(alignment: .topTrailing) {
@@ -54,12 +51,13 @@ struct SaveMessageView: View {
                         }
                         .padding()
                         .foregroundColor(.black)
-                        .frame(width: 330, height: 200)
+                        .frame(width: 320, height: 200)
                     /// 텍스트 필드의 프레임 설정
                         .background(
                             RoundedRectangle(cornerRadius: 30, style: .continuous)
-                                .fill(Color.appDarkBeige)
-                                .shadow(color:Color(.systemGray5),radius: 5,y: 5)
+                                .fill(message.isEmpty ? Color.appBeige : Color.appDarkBeige)
+                                .shadow(color:Color(.systemGray3),radius: 5,y: 5)
+                                .animation(.easeInOut(duration: 0.5), value: message.isEmpty)
                         )
                         .scrollContentBackground(.visible)
                     Text("\(message.count) / 70")
@@ -119,8 +117,10 @@ struct SaveMessageView: View {
     }
 }
 
+// MARK: Preview를 위해 가장 긴 글을 그냥 가져옴
+
 struct SaveMessageView_Previews: PreviewProvider {
     static var previews: some View {
-        SaveMessageView(navigateSaveMoneyView: .constant(true), navigateSaveMessageView: .constant(true), money: .constant(""), randomQuestion: .constant("최근에 그 사람이 가장 보고싶었던 순간은 언제인가요? → 만나서 그 사람에게 처음으로 건넬 말은 무엇인가요"))
+        SaveMessageView(navigateSaveMoneyView: .constant(true), navigateSaveMessageView: .constant(true), money: .constant(""), randomQuestion: .constant("진심으로 미안했지만 제대로 사과하지 못했던 순간이 있나요? 지금 이 기회를 빌려, tyler의 진심을 전해주세요."))
     }
 }

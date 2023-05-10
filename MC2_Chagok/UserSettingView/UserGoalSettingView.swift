@@ -26,7 +26,7 @@ struct UserGoalSettingView: View {
                 Text(goalDay.timeIntervalSinceNow < 0 ? "언제까지 모아야 하나요?" : "얼마를 모아야 하나요?")
                     .frame(width: 320, alignment: .leading)
                     .fontWeight(.bold)
-                    .font(.title)
+                    .font(.title2)
                     .padding(.top, 50)
                     .padding(.bottom, 10)
                 VStack(alignment: .leading, spacing: 0) {
@@ -80,7 +80,6 @@ struct UserGoalSettingView: View {
                 Spacer()
             }
             .ignoresSafeArea(.keyboard)
-            .frame(width: 340)
             .tint(.appRed)
             .navigationDestination(isPresented: $navigateContentView) {
                 MainView()

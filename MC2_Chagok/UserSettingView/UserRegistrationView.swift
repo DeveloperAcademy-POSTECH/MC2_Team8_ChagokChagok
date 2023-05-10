@@ -34,8 +34,8 @@ struct UserRegistrationView: View {
                     
                     /// 최상단의 페이지 이름
                     Text(swiftNamePopup != true || tylerName.isEmpty ? "이름을 알려주세요" : "애인의 이름을 알려주세요")
-                        .fontWeight(.semibold)
-                        .font(.title)
+                        .fontWeight(.bold)
+                        .font(.title2)
                         .padding(.top, 95)
                         .padding(.bottom, 10)
                     
