@@ -21,12 +21,14 @@ struct PostboxView: View {
                 //                }
                 VStack(alignment: .leading) {
                     Text("우체통 안 편지들")
-                        .font(.title)
+                        .font(.title2)
                         .bold()
                         .padding(.top, 30)
+                        .padding(.bottom, 1)
                     Text("\(userData.userdata.count)장 채웠어요")
-                        .font(.title2)
                         .padding(.bottom, 20)
+                        .font(.caption)
+                        .foregroundColor(.appGray)
                 }
                 .frame(width: 330, alignment: .leading)
                 ScrollView {

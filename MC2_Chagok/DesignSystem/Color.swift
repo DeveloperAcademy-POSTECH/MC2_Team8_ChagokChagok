@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Color에서 쉽게 불러오기 위해서 이름 지정
 extension Color {
     static let appBeige = Color("appBeige")
     static let appRed = Color("appRed")

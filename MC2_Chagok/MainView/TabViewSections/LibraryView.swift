@@ -13,9 +13,18 @@ struct LibraryView: View {
         ZStack {
             Color.appBeige
                 .ignoresSafeArea()
-            VStack {
-                Text("Library View")
-                    .padding(.top)
+            VStack(alignment: .leading) {
+                VStack(alignment: .leading) {
+                    Text("내가 모은 우표들")
+                        .font(.title2)
+                        .bold()
+                        .padding(.top, 30)
+                        .padding(.bottom, 1)
+                    Text("목표를 달성하면 편지에 붙일 우표를 드려요")
+                        .padding(.bottom, 20)
+                        .font(.caption)
+                        .foregroundColor(.appGray)
+                }
                 ScrollView {
                     VStack {
                         ForEach(0..<3) {_ in
@@ -24,7 +33,7 @@ struct LibraryView: View {
                                 .frame(width: 380)
                         }
                     }
-                    .frame(width: 370)
+                    .frame(width: 336)
                 }
             }
         }
@@ -43,8 +52,6 @@ struct LibraryCard: View {
                 .foregroundColor(.black)
                 .frame(width: 340, height: 100)
                 .background(.regularMaterial, in : RoundedRectangle(cornerRadius: 20, style: .continuous))
-
-//                .background(Color(.systemGray5), in : RoundedRectangle(cornerRadius: 20, style: .continuous))
         }
         .navigationDestination(isPresented: $navigateLibraryDetailView) {
             LibraryDetailView(navigateLibraryDetailView: $navigateLibraryDetailView)
@@ -77,3 +84,8 @@ struct LibraryDetailView: View {
     }
 }
 
+struct LibraryView_Previews: PreviewProvider {
+    static var previews: some View {
+        LibraryView()
+    }
+}

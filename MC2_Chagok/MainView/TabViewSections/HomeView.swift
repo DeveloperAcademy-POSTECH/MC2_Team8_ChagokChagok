@@ -9,6 +9,9 @@ import SwiftUI
 
 struct HomeView: View {
     
+    @State var userData = UserData()
+    @State var goalMoney = UserDefaults.standard.integer(forKey: "realGoalMoney")
+    
     @State var navigateSaveMoneyView = false
     @State var randomQuestion = ""
     
@@ -21,20 +24,16 @@ struct HomeView: View {
             
             VStack {
                 Spacer()
-                ZStack(alignment: .topLeading) {
-                    Image("Postbox0-20")
+                    postboxImageName(userData: userData, goalMoney: goalMoney)
                         .resizable()
                         .scaledToFit()
                         .frame(height: 390)
-                        .edgesIgnoringSafeArea(.top)
-                    
                     /// 애니메이션
                         .onTapGesture {
                                 counter += 1
                         }
                         .confettiCannon(counter: $counter)
 
-                }
                 Spacer()
                 Spacer()
                 HomeCardView()
@@ -49,6 +48,10 @@ struct HomeView: View {
                 .padding(.bottom)
             }
         }
+        .onAppear {
+            userData = UserData()
+            goalMoney = UserDefaults.standard.integer(forKey: "realGoalMoney")
+        }
         .navigationDestination(isPresented: $navigateSaveMoneyView) {
             SaveMoneyView(navigateSaveMoneyView: $navigateSaveMoneyView, randomQuestion: $randomQuestion)
         }
@@ -58,17 +61,14 @@ struct HomeView: View {
 struct HomeCardView: View {
     
     @State var userData = UserData()
-    
     @State var dday = Calculate.Dday(to: UserDefaults.standard.object(forKey: "realGoalDay") as? Date ?? Date())
-    @State var myMoney = 30000
     @State var goalMoney = UserDefaults.standard.integer(forKey: "realGoalMoney")
     
     var body: some View {
         
-        let percent = goalMoney > 0 ? max(min((1 - Double(userData.total) / Double(goalMoney)) * 100, 100), 0) : 0
+        let percent = goalMoney > 0 ? max(min((Double(userData.total) / Double(goalMoney)) * 100, 100), 0) : 0
         
         VStack(alignment: .center, spacing: 10) {
-            
             HStack(alignment: .firstTextBaseline, spacing: 3){
                 Text("\(userData.total)")
                     .font(.system(.title))
@@ -78,8 +78,9 @@ struct HomeCardView: View {
                     .bold()
             }
             
+            /// 기본 컴포넌트 Gauge 활용
             ZStack {
-                Gauge(value: 1-percent/100, in: 0...1) {
+                Gauge(value: percent/100, in: 0...1) {
                 }
                 .frame(width: 310, height: 16)
                 .tint(Color.appPink)

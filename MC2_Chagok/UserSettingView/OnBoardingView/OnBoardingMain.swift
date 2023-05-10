@@ -22,9 +22,9 @@ struct OnBoardingMain: View {
                         Text("onboarding third")
                             .padding(.top, 60)
                         Spacer()
-                        }
-                        .padding(.bottom, 60)
                     }
+                    .padding(.bottom, 60)
+                }
                 .padding(.bottom)
                 .padding(.bottom)
                 CustomButton(label: "시작하기", disable: false) {
@@ -32,9 +32,9 @@ struct OnBoardingMain: View {
                 }
                 .padding(.bottom)
                 .padding(.bottom)
-                }
-                .tabViewStyle(.page(indexDisplayMode: .always))
-                .indexViewStyle(.page(backgroundDisplayMode: .always))
+            }
+            .tabViewStyle(.page(indexDisplayMode: .always))
+            .indexViewStyle(.page(backgroundDisplayMode: .always))
         }
     }
 }

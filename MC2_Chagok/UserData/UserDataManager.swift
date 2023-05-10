@@ -76,14 +76,14 @@ struct Question {
     var tyler: String
     var swift: String
     
-    /// 혹시모르니 안전하게... nil 값을 방지해봅시다.
+    /// 혹시모르니 안전하게... nil 값을 방지. nill 값일때 기본값 Tyler, Swift
     init() {
         self.tyler = UserDefaults.standard.string(forKey: "Tyler") ?? "Tyler"
         self.swift = UserDefaults.standard.string(forKey: "Swift") ?? "Swift"
     }
     
     // MARK: Guiding Question by.Bently :)
-    
+    /// Tip: 그냥 chat-GPT한테 \(swift), \(tyler) 로 바꿔달라고 하면 쭉 바꿔줍니다.
     var question: [String] {
         [
             "\(swift)을 처음 마주했을 때 \(tyler)의 감정은 어땠는지 표현해주세요.",

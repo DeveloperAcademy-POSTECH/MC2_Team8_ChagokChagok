@@ -44,7 +44,7 @@ struct SaveMessageView: View {
                     .fontWeight(.semibold)
                     .font(.title3)
                 
-                /// 텍스트 필드 뷰, Shadow를
+                /// 텍스트 필드 뷰
                 ZStack(alignment: .topTrailing) {
                     TextField("답변을 입력해주세요 (70자 이내)", text: $message, axis: .vertical)
                         .onChange(of: message) { newValue in
@@ -55,6 +55,7 @@ struct SaveMessageView: View {
                         .padding()
                         .foregroundColor(.black)
                         .frame(width: 330, height: 200)
+                    /// 텍스트 필드의 프레임 설정
                         .background(
                             RoundedRectangle(cornerRadius: 30, style: .continuous)
                                 .fill(Color.appDarkBeige)

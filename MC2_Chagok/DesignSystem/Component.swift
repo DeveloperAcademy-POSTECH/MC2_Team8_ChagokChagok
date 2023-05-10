@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+
+// MARK: Button 확인
+
 struct Component: View {
     
     @State private var text = ""
@@ -27,14 +30,6 @@ struct Component: View {
             
             Text("This is custom small button")
             HStack {
-                CustomSmallButton(label: "hello", disable: false, textColor: .appRed, backgroundColor: .appDarkBeige, shadowColor: Color(.systemGray4)) {
-                    
-                }
-                CustomSmallButton(label: "hello", disable: false, textColor: .white, backgroundColor: .appRed, shadowColor: Color(.systemGray3)) {
-                    
-                }
-            }
-            HStack {
                 CustomSmallRedButton(label: "Red") {
                 }
                 CustomSmallBeigeButton(label: "Beige") {
@@ -45,6 +40,8 @@ struct Component: View {
         }
     }
 }
+
+// MARK: CustomButtons
 
 // MARK: HardCustomButton
 
@@ -59,7 +56,7 @@ struct HardCustomButton: View {
     }
 }
 
-// MARK : CustomSmallButton
+// MARK: CustomSmallButton
 
 struct CustomSmallButton: View {
     
@@ -93,7 +90,7 @@ struct CustomSmallBeigeButton: View {
     var action: () -> Void
     
     var body: some View {
-        CustomSmallButton(label: label, disable: false, textColor: .appRed, backgroundColor: .appDarkBeige, shadowColor: Color(.systemGray4), action: action)
+        CustomSmallButton(label: label, disable: false, textColor: .appRed, backgroundColor: .appDarkBeige, shadowColor: Color(.systemGray3), action: action)
     }
 }
 
@@ -178,8 +175,6 @@ struct CustomTextField: View {
             .tint(.appRed)
     }
 }
-
-
 
 struct Component_Previews: PreviewProvider {
     static var previews: some View {
