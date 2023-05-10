@@ -24,21 +24,16 @@ struct UserAlertView: View {
             ZStack {
                 Color.appBeige.ignoresSafeArea()
                 VStack(alignment: .leading) {
-                    Spacer()
-                    Spacer()
                     Text("\(dateFormatter.string(from: goalDay))까지\n\((Int(goalMoney) ?? 0)/10000)만원\n차곡차곡 쌓아봐요!")
                         .font(.title2)
                         .bold()
-                    
+                        .padding(.top, 90)
+                        .padding(.bottom, 10)
                     Text("이 목표는 달성할 때까지 수정할 수 없어요")
                         .foregroundColor(.appRed)
                         .fontWeight(.semibold)
                         .padding(.top)
                     Group {
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
                         Spacer()
                     }
                     HStack {
@@ -58,7 +53,8 @@ struct UserAlertView: View {
                             userAlertView = false
                         }
                     }
-                    Spacer()
+                    .padding(.bottom, 50)
+
                 }
             }
     }

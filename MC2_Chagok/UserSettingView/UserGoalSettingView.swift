@@ -42,18 +42,16 @@ struct UserGoalSettingView: View {
                 
                 VStack(alignment: .leading, spacing: 0) {
                     TextField("", text: $goalMoney)
-                    //                            .foregroundColor(.clear)
+                        .foregroundColor(.clear)
                         .frame(width: 320, height: 50)
                         .keyboardType(.numberPad)
                         .animation(.easeInOut(duration: 0.5), value: goalDay.timeIntervalSinceNow > 0)
-                    
-                    /// 텍스트 필드 애니메이션 UI 챌린지
-                    //                            .background(
-                    //                                Text("\(goalMoney) 원")
-                    //                                    .opacity(goalMoney.isEmpty ? 0 : 1)
-                    //                                    .animation(.easeInOut(duration: 0.2), value: goalMoney.isEmpty)
-                    //                                ,alignment: .leading
-                    //                            )
+                        .background(
+                            Text("\(goalMoney) 원")
+                                .opacity(goalMoney.isEmpty ? 0 : 1)
+                                .animation(.easeInOut(duration: 0.3), value: goalMoney.isEmpty)
+                            ,alignment: .leading
+                        )
                         .background(
                             Text("목표 금액")
                                 .foregroundColor(goalMoney.isEmpty ? Color(.systemGray4) : .gray)
@@ -75,6 +73,9 @@ struct UserGoalSettingView: View {
                                 .foregroundColor(Color(.systemGray5))
                             ,alignment: .bottom
                         )
+                        .opacity(goalDay.timeIntervalSinceNow > 0 ? 1 : 0)
+                        .offset(y : goalDay.timeIntervalSinceNow > 0 ? 0 : -20)
+                        .animation(.easeInOut(duration: 0.5), value: goalDay.timeIntervalSinceNow > 0)
                 }
                 Spacer()
             }
@@ -107,18 +108,21 @@ struct UserGoalSettingView: View {
                 }
             }
         }
-        .onDisappear {
-            UserDefaults.standard.set(goalMoney, forKey: "GoalMoney")
-            UserDefaults.standard.set(goalDay, forKey: "GoalDay")
-        }
-        .onAppear {
-            if let GoalMoney = UserDefaults.standard.string(forKey: "GoalMoney") {
-                goalMoney = GoalMoney
-            }
-            if let GoalDay = UserDefaults.standard.object(forKey: "GoalDay") as? Date {
-                goalDay = GoalDay
-            }
-        }
+//        .onDisappear {
+//            UserDefaults.standard.set(goalMoney, forKey: "GoalMoney")
+//            UserDefaults.standard.set(goalDay, forKey: "GoalDay")
+//        }
+//        .onAppear {
+//            if let GoalMoney = UserDefaults.standard.string(forKey: "GoalMoney") {
+//                goalMoney = GoalMoney
+//            }
+//            if let GoalDay = UserDefaults.standard.object(forKey: "GoalDay") as? Date {
+//                goalDay = GoalDay
+//            }
+//        }
+        
+        // MARK: UserAlertView 창 띄우기
+        
         .fullScreenCover(isPresented: $userAlertView) {
             UserAlertView(userAlertView: $userAlertView, navigateContentView: $navigateContentView, goalMoney: $goalMoney, goalDay: $goalDay)
         }

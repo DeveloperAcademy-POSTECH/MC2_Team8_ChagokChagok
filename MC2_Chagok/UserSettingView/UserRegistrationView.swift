@@ -36,11 +36,13 @@ struct UserRegistrationView: View {
                     Text(swiftNamePopup != true || tylerName.isEmpty ? "이름을 알려주세요" : "애인의 이름을 알려주세요")
                         .fontWeight(.semibold)
                         .font(.title)
-                        .padding(.top, 50)
+                        .padding(.top, 95)
                         .padding(.bottom, 10)
                     
                     
                     VStack {
+                        
+                        /// 내이름 입력란
                         TextField("", text: $tylerName)
                             .frame(width: 320, height: 50)
                             .background(
@@ -65,6 +67,8 @@ struct UserRegistrationView: View {
                                 ,alignment: .bottom
                             )
                             .padding(.vertical)
+                        
+                        /// 애인 이름 입력란
                         TextField("", text: $swiftName)
                             .frame(width: 320, height: 50)
                             .background(
