@@ -21,23 +21,16 @@ struct UserAlertView: View {
             formatter.dateFormat = "yyyy년 MM월 dd일"
             return formatter
         }()
-        
-        GeometryReader { geometry in
             ZStack {
                 Color.appBeige.ignoresSafeArea()
                 VStack(alignment: .leading) {
                     Spacer()
                     Spacer()
-                    Text(Image(systemName: "checkmark.circle.fill"))
-                        .padding(.bottom)
-                        .font(.largeTitle)
-                        .foregroundColor(.appRed)
                     Text("\(dateFormatter.string(from: goalDay))까지\n\((Int(goalMoney) ?? 0)/10000)만원\n차곡차곡 쌓아봐요!")
-                        .font(.title)
+                        .font(.title2)
                         .bold()
                     
                     Text("이 목표는 달성할 때까지 수정할 수 없어요")
-                        .font(.title2)
                         .foregroundColor(.appRed)
                         .fontWeight(.semibold)
                         .padding(.top)
@@ -68,7 +61,6 @@ struct UserAlertView: View {
                     Spacer()
                 }
             }
-        }
     }
 }
 

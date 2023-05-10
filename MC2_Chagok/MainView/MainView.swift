@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainView: View {
     
     /// UITabBar 배경화면 베이지로 유지
     init() {
@@ -29,7 +29,7 @@ struct ContentView: View {
                             .environment(\.symbolVariants, .none)
                     }
                     .tag(0)
-                MessageView()
+                PostboxView()
                     .tabItem {
                         Text("우체통 보기")
                         Image(systemName: selection == 1 ? "heart.text.square.fill" : "heart.text.square")
@@ -58,8 +58,8 @@ struct ContentView: View {
 }
 
 
-struct ContentView_Previews: PreviewProvider {
+struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainView()
     }
 }

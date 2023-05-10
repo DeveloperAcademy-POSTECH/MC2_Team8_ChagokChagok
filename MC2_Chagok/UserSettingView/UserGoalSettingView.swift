@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GoalSettingView: View {
+struct UserGoalSettingView: View {
     @State private var goalMoney = ""
     @State private var goalDay = Date()
     @State private var showPicker = false
@@ -61,7 +61,7 @@ struct GoalSettingView: View {
             .frame(width: 340)
             .tint(.appRed)
             .navigationDestination(isPresented: $navigateContentView) {
-                ContentView()
+                MainView()
             }
             .navigationBarBackButtonHidden()
             .toolbar {
@@ -102,8 +102,8 @@ struct GoalSettingView: View {
     }
 }
 
-struct GoalSettingView_Previews: PreviewProvider {
+struct UserGoalSettingView_Previews: PreviewProvider {
     static var previews: some View {
-        GoalSettingView(navigateGoalSettingView: .constant(true))
+        UserGoalSettingView(navigateGoalSettingView: .constant(true))
     }
 }

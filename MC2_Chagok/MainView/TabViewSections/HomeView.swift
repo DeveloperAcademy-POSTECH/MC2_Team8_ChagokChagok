@@ -22,7 +22,7 @@ struct HomeView: View {
             VStack {
                 Spacer()
                 ZStack(alignment: .topLeading) {
-                    Image("testPostbox")
+                    Image("Postbox0-20")
                         .resizable()
                         .scaledToFit()
                         .frame(height: 390)

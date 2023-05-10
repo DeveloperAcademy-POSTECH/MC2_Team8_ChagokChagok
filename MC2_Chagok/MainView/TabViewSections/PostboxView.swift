@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MessageView: View {
+struct PostboxView: View {
     
     @State var userData = UserData()
     
@@ -103,8 +103,8 @@ struct MessageCard: View {
     }
 }
 
-struct MessageView_Previews: PreviewProvider {
+struct PostboxView_Previews: PreviewProvider {
     static var previews: some View {
-        MessageView()
+        PostboxView()
     }
 }

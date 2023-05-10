@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct UserInfoView: View {
+struct UserRegistrationView: View {
     
     /// 텍스트 필드에 입력받는 변수
     /// tylerName과 swiftName을 입력받습니다. Userdefaults에 저장 예정입니다.
@@ -24,8 +24,7 @@ struct UserInfoView: View {
         NavigationStack {
             ZStack {
                 
-                // MARK: 배경색 처리
-                
+                /// 배경색
                 Color.appBeige.ignoresSafeArea()
                 
                 // MARK: 본격적인 뷰 시작
@@ -107,7 +106,7 @@ struct UserInfoView: View {
                     }
                     .ignoresSafeArea()
                     .navigationDestination(isPresented: $navigateGoalSettingView) {
-                        GoalSettingView(navigateGoalSettingView: $navigateGoalSettingView)
+                        UserGoalSettingView(navigateGoalSettingView: $navigateGoalSettingView)
                     }
                 }
             }
@@ -116,8 +115,8 @@ struct UserInfoView: View {
     }
 }
 
-struct UserInfoView_Previews: PreviewProvider {
+struct UserRegistrationView_Previews: PreviewProvider {
     static var previews: some View {
-        UserInfoView()
+        UserRegistrationView()
     }
 }

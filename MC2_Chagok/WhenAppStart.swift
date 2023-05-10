@@ -16,11 +16,11 @@ struct WhenAppStart: View {
         /// 유저가 시작할때 Goal을 정했는지 안했는지 체크
         if goalMoney > 0 {
             NavigationStack {
-                ContentView()
+                MainView()
             }
             .tint(.appRed)
         } else {
-            UserInfoView()
+            UserRegistrationView()
         }
     }
 }
