@@ -71,7 +71,7 @@ struct MessageCard: View {
             .padding(.bottom)
             HStack(alignment: .firstTextBaseline) {
                 Text(user.question)
-                    .font(.caption)
+                    .font(.callout)
                 Spacer()
                 Button {
                     withAnimation(.easeInOut(duration: 0.3)) {
