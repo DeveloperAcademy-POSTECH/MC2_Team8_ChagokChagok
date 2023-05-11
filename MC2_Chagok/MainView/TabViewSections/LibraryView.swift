@@ -24,43 +24,46 @@ struct LibraryView: View {
                         .padding(.bottom, 20)
                         .font(.caption)
                         .foregroundColor(.appGray)
-                    Text("우체통에 이만큼 채웠어요")
-                        .fontWeight(.semibold)
-                    ForEach(0..<3) { row in
-                        HStack {
-                            ForEach(0..<3) { column in
-                                VStack(spacing: 0) {
-                                    Image("LockImage")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 102)
-                                    Text("\((column + 1 + row * 3))00만원 이상 채웠어요")
-                                        .font(.system(size: 8))
-                                        .foregroundColor(.gray)
+                    ScrollView {
+                        Text("우체통에 이만큼 채웠어요")
+                            .fontWeight(.semibold)
+                            .frame(width: 330, alignment: .leading)
+                        ForEach(0..<3) { row in
+                            HStack {
+                                ForEach(0..<3) { column in
+                                    VStack(spacing: 0) {
+                                        Image("LockImage")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 102)
+                                        Text("\((column + 1 + row * 3))00만원 이상 채웠어요")
+                                            .font(.system(size: 8))
+                                            .foregroundColor(.gray)
+                                    }
                                 }
                             }
                         }
-                    }
-                    Text("편지 묶음을 이만큼 보냈어요")
-                        .fontWeight(.semibold)
-                        .padding(.top)
-                    ForEach(0..<2) { row in
-                        HStack {
-                            ForEach(0..<3) { column in
-                                VStack(spacing: 0) {
-                                    Image("LockImage")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 102)
-                                    Text("\((column + 1 + row * 3))번 이상 보냈어요")
-                                        .font(.system(size: 8))
-                                        .foregroundColor(.gray)
+                        Text("편지 묶음을 이만큼 보냈어요")
+                            .fontWeight(.semibold)
+                            .frame(width: 330, alignment: .leading)
+                            .padding(.top)
+                        ForEach(0..<2) { row in
+                            HStack {
+                                ForEach(0..<3) { column in
+                                    VStack(spacing: 0) {
+                                        Image("LockImage")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 102)
+                                        Text("\((column + 1 + row * 3))번 이상 보냈어요")
+                                            .font(.system(size: 8))
+                                            .foregroundColor(.gray)
+                                    }
                                 }
                             }
                         }
                     }
                 }
-                .frame(width: 330, alignment: .leading)
                 
                 Spacer()
             }
