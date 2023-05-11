@@ -44,6 +44,5 @@ func postboxImageName(userData: UserData, goalMoney: Int) -> Image {
     default:
         break
     }
-    
     return Image(postboxImageName)
 }

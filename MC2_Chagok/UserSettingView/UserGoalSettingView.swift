@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct UserGoalSettingView: View {
-    @Environment(\.dismiss) var dismiss
-    
     @State private var goalMoney = ""
     @State private var goalDay = Date()
     @State private var showPicker = false
@@ -79,11 +77,6 @@ struct UserGoalSettingView: View {
                         .opacity(goalDay.timeIntervalSinceNow > 0 ? 1 : 0)
                         .offset(y : goalDay.timeIntervalSinceNow > 0 ? 0 : -20)
                         .animation(.easeInOut(duration: 0.5), value: goalDay.timeIntervalSinceNow > 0)
-                        .onAppear {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                self.goalMoneyfocus = true
-                            }
-                        }
                 }
                 Spacer()
             }
@@ -111,22 +104,23 @@ struct UserGoalSettingView: View {
                 if !goalMoney.isEmpty && Int(goalMoney) ?? 0 > 0 && goalDay.timeIntervalSinceNow > 0 {
                     CustomLongButton(label: "시작하기", disable: false) {
                         userAlertView = true
+                        goalMoneyfocus = false
                     }
                 }
             }
         }
-//        .onDisappear {
-//            UserDefaults.standard.set(goalMoney, forKey: "GoalMoney")
-//            UserDefaults.standard.set(goalDay, forKey: "GoalDay")
-//        }
-//        .onAppear {
-//            if let GoalMoney = UserDefaults.standard.string(forKey: "GoalMoney") {
-//                goalMoney = GoalMoney
-//            }
-//            if let GoalDay = UserDefaults.standard.object(forKey: "GoalDay") as? Date {
-//                goalDay = GoalDay
-//            }
-//        }
+        //        .onDisappear {
+        //            UserDefaults.standard.set(goalMoney, forKey: "GoalMoney")
+        //            UserDefaults.standard.set(goalDay, forKey: "GoalDay")
+        //        }
+        //        .onAppear {
+        //            if let GoalMoney = UserDefaults.standard.string(forKey: "GoalMoney") {
+        //                goalMoney = GoalMoney
+        //            }
+        //            if let GoalDay = UserDefaults.standard.object(forKey: "GoalDay") as? Date {
+        //                goalDay = GoalDay
+        //            }
+        //        }
         
         // MARK: UserAlertView 창 띄우기
         

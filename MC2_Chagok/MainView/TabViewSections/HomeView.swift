@@ -21,7 +21,6 @@ struct HomeView: View {
         ZStack{
             Color.appBeige
                 .ignoresSafeArea()
-            
             VStack {
                 Spacer()
                     postboxImageName(userData: userData, goalMoney: goalMoney)
