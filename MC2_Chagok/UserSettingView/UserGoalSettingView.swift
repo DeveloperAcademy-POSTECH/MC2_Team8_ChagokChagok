@@ -48,7 +48,7 @@ struct UserGoalSettingView: View {
                         .keyboardType(.numberPad)
                         .animation(.easeInOut(duration: 0.5), value: goalDay.timeIntervalSinceNow > 0)
                         .background(
-                            Text("\(goalMoney) 원")
+                            Text("\(Int(goalMoney) ?? 0) 원")
                                 .opacity(goalMoney.isEmpty ? 0 : 1)
                                 .animation(.easeInOut(duration: 0.3), value: goalMoney.isEmpty)
                             ,alignment: .leading
