@@ -30,7 +30,7 @@ struct LetterC: View {
                 
                 HStack{
                     // Data - Image
-                    Image("Image 1")
+                    Image("Image_1")
                 }
                 
                 Spacer()

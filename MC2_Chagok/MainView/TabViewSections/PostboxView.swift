@@ -69,7 +69,7 @@ struct MessageCard: View {
             .foregroundColor(.appRed)
             .bold()
             .padding(.bottom)
-            HStack(alignment: .firstTextBaseline) {
+            HStack(alignment: .lastTextBaseline) {
                 Text(user.question)
                     .font(.callout)
                 Spacer()

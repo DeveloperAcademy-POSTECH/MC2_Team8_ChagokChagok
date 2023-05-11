@@ -42,9 +42,7 @@
 		297D4DF02A0BFB65000CD018 /* LetterB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4DEF2A0BFB65000CD018 /* LetterB.swift */; };
 		297D4DF22A0BFB70000CD018 /* LetterC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4DF12A0BFB70000CD018 /* LetterC.swift */; };
 		297F7C8C2A0C97160044B50C /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297F7C8B2A0C97160044B50C /* FontHelper.swift */; };
-		297F7C902A0C976B0044B50C /* font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 297F7C8F2A0C976B0044B50C /* font.ttf */; };
-		297F7C942A0C97910044B50C /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 297F7C922A0C97910044B50C /* Contents.json */; };
-		297F7C952A0C97910044B50C /* 강원교육새음.otf in Resources */ = {isa = PBXBuildFile; fileRef = 297F7C932A0C97910044B50C /* 강원교육새음.otf */; };
+		297F7C902A0C976B0044B50C /* GangwonEduSaeeum.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 297F7C8F2A0C976B0044B50C /* GangwonEduSaeeum.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,9 +82,8 @@
 		297D4DEF2A0BFB65000CD018 /* LetterB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterB.swift; sourceTree = "<group>"; };
 		297D4DF12A0BFB70000CD018 /* LetterC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterC.swift; sourceTree = "<group>"; };
 		297F7C8B2A0C97160044B50C /* FontHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
-		297F7C8F2A0C976B0044B50C /* font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = font.ttf; sourceTree = "<group>"; };
-		297F7C922A0C97910044B50C /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
-		297F7C932A0C97910044B50C /* 강원교육새음.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "강원교육새음.otf"; sourceTree = "<group>"; };
+		297F7C8F2A0C976B0044B50C /* GangwonEduSaeeum.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GangwonEduSaeeum.ttf; sourceTree = "<group>"; };
+		297F7C962A0C9B530044B50C /* MC2-Chagok-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MC2-Chagok-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +116,7 @@
 		297D4D582A0B593D000CD018 /* MC2_Chagok */ = {
 			isa = PBXGroup;
 			children = (
+				297F7C962A0C9B530044B50C /* MC2-Chagok-Info.plist */,
 				297D4D592A0B593D000CD018 /* MC2_ChagokApp.swift */,
 				297D4DA92A0B7B15000CD018 /* WhenAppStart.swift */,
 				297D4DAB2A0B7B2D000CD018 /* UserSettingView */,
@@ -289,7 +287,6 @@
 		297F7C8D2A0C975E0044B50C /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				297F7C912A0C97910044B50C /* 강원교육새음.dataset */,
 				297F7C8E2A0C976B0044B50C /* Resources */,
 				297F7C8A2A0C97160044B50C /* FontHelper */,
 			);
@@ -299,18 +296,9 @@
 		297F7C8E2A0C976B0044B50C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				297F7C8F2A0C976B0044B50C /* font.ttf */,
+				297F7C8F2A0C976B0044B50C /* GangwonEduSaeeum.ttf */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		297F7C912A0C97910044B50C /* 강원교육새음.dataset */ = {
-			isa = PBXGroup;
-			children = (
-				297F7C922A0C97910044B50C /* Contents.json */,
-				297F7C932A0C97910044B50C /* 강원교육새음.otf */,
-			);
-			path = "강원교육새음.dataset";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,10 +360,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				297D4D612A0B593E000CD018 /* Preview Assets.xcassets in Resources */,
-				297F7C952A0C97910044B50C /* 강원교육새음.otf in Resources */,
 				297D4D5E2A0B593E000CD018 /* Assets.xcassets in Resources */,
-				297F7C902A0C976B0044B50C /* font.ttf in Resources */,
-				297F7C942A0C97910044B50C /* Contents.json in Resources */,
+				297F7C902A0C976B0044B50C /* GangwonEduSaeeum.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,6 +536,7 @@
 				DEVELOPMENT_TEAM = 77745NX67K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MC2-Chagok-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "차곡차곡";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -582,6 +569,7 @@
 				DEVELOPMENT_TEAM = 77745NX67K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MC2-Chagok-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "차곡차곡";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

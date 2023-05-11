@@ -49,7 +49,7 @@ struct LetterA: View {
                 
                 HStack{
                     // Data - Image
-                    Image("Image 1")
+                    Image("Image_1")
                 }
             }
             .frame(minWidth: 390, minHeight: 844)
