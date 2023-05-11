@@ -22,7 +22,7 @@ struct LibraryView: View {
                         .padding(.bottom, 1)
                     Text("차곡차곡 채워서 잠겨있는 기록들을 깨보세요!")
                         .padding(.bottom, 20)
-                        .font(.caption)
+                        .font(.callout)
                         .foregroundColor(.appGray)
                     ScrollView {
                         Text("우체통에 이만큼 채웠어요")

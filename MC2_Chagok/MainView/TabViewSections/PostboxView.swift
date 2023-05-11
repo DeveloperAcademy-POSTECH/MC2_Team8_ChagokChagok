@@ -24,7 +24,7 @@ struct PostboxView: View {
                         .padding(.bottom, 1)
                     Text("\(userData.userdata.count)장 채웠어요")
                         .padding(.bottom, 20)
-                        .font(.caption)
+                        .font(.callout)
                         .foregroundColor(.appGray)
                 }
                 .frame(width: 330, alignment: .leading)
