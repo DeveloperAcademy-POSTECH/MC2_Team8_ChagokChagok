@@ -41,6 +41,10 @@
 		297D4DEE2A0BFB4E000CD018 /* LetterA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4DED2A0BFB4E000CD018 /* LetterA.swift */; };
 		297D4DF02A0BFB65000CD018 /* LetterB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4DEF2A0BFB65000CD018 /* LetterB.swift */; };
 		297D4DF22A0BFB70000CD018 /* LetterC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4DF12A0BFB70000CD018 /* LetterC.swift */; };
+		297F7C8C2A0C97160044B50C /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297F7C8B2A0C97160044B50C /* FontHelper.swift */; };
+		297F7C902A0C976B0044B50C /* font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 297F7C8F2A0C976B0044B50C /* font.ttf */; };
+		297F7C942A0C97910044B50C /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 297F7C922A0C97910044B50C /* Contents.json */; };
+		297F7C952A0C97910044B50C /* 강원교육새음.otf in Resources */ = {isa = PBXBuildFile; fileRef = 297F7C932A0C97910044B50C /* 강원교육새음.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +83,10 @@
 		297D4DED2A0BFB4E000CD018 /* LetterA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterA.swift; sourceTree = "<group>"; };
 		297D4DEF2A0BFB65000CD018 /* LetterB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterB.swift; sourceTree = "<group>"; };
 		297D4DF12A0BFB70000CD018 /* LetterC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterC.swift; sourceTree = "<group>"; };
+		297F7C8B2A0C97160044B50C /* FontHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
+		297F7C8F2A0C976B0044B50C /* font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = font.ttf; sourceTree = "<group>"; };
+		297F7C922A0C97910044B50C /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		297F7C932A0C97910044B50C /* 강원교육새음.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "강원교육새음.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +234,7 @@
 		297D4DCA2A0B7B73000CD018 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				297F7C8D2A0C975E0044B50C /* Font */,
 				297D4DCB2A0B7B73000CD018 /* Component.swift */,
 				297D4DCC2A0B7B73000CD018 /* Color.swift */,
 			);
@@ -267,6 +276,41 @@
 				297D4DF12A0BFB70000CD018 /* LetterC.swift */,
 			);
 			path = LetterView;
+			sourceTree = "<group>";
+		};
+		297F7C8A2A0C97160044B50C /* FontHelper */ = {
+			isa = PBXGroup;
+			children = (
+				297F7C8B2A0C97160044B50C /* FontHelper.swift */,
+			);
+			path = FontHelper;
+			sourceTree = "<group>";
+		};
+		297F7C8D2A0C975E0044B50C /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				297F7C912A0C97910044B50C /* 강원교육새음.dataset */,
+				297F7C8E2A0C976B0044B50C /* Resources */,
+				297F7C8A2A0C97160044B50C /* FontHelper */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		297F7C8E2A0C976B0044B50C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				297F7C8F2A0C976B0044B50C /* font.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		297F7C912A0C97910044B50C /* 강원교육새음.dataset */ = {
+			isa = PBXGroup;
+			children = (
+				297F7C922A0C97910044B50C /* Contents.json */,
+				297F7C932A0C97910044B50C /* 강원교육새음.otf */,
+			);
+			path = "강원교육새음.dataset";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,7 +372,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				297D4D612A0B593E000CD018 /* Preview Assets.xcassets in Resources */,
+				297F7C952A0C97910044B50C /* 강원교육새음.otf in Resources */,
 				297D4D5E2A0B593E000CD018 /* Assets.xcassets in Resources */,
+				297F7C902A0C976B0044B50C /* font.ttf in Resources */,
+				297F7C942A0C97910044B50C /* Contents.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +401,7 @@
 				297D4DE52A0BD8EE000CD018 /* OnBoardingThirdView.swift in Sources */,
 				297D4DD82A0B7B73000CD018 /* SaveMessageView.swift in Sources */,
 				297D4DB42A0B7B2D000CD018 /* UserAlertView.swift in Sources */,
+				297F7C8C2A0C97160044B50C /* FontHelper.swift in Sources */,
 				297D4DE72A0BF98E000CD018 /* PopupView.swift in Sources */,
 				297D4DD62A0B7B73000CD018 /* SaveMoneyView.swift in Sources */,
 				297D4DD72A0B7B73000CD018 /* SaveAlertView.swift in Sources */,
