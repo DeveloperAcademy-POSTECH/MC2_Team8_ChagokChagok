@@ -9,8 +9,8 @@ import SwiftUI
 
 struct OnBoardingMain: View {
     
-    @Binding var onBoarding: Bool
     @State var selection = 0
+    @Binding var onBoarding: Bool
     
     var body: some View {
         ZStack {
@@ -23,7 +23,6 @@ struct OnBoardingMain: View {
                 }
                 .padding(.bottom)
                 CustomButton(label: "시작하기", disable: selection != 2) {
-                    UserDefaults.standard.set(false, forKey: "onBoarding")
                     onBoarding = false
                 }
                 .padding(.bottom, 20)

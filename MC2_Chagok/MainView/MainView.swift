@@ -17,14 +17,17 @@ struct MainView: View {
     
     @State var userData = UserData()
     @State private var selection = 0
-    @State private var onBoarding = UserDefaults.standard.bool(forKey: "onBoarding")
     
-    //    let onBoarding = UserDefaults.standard.bool(forKey: "onBoarding")
-    
+    @AppStorage("onBoarding") var onBoarding: Bool = true
     
     var body: some View {
         /// TabView로 메인 페이지 구성
         ZStack {
+            if onBoarding == true {
+                OnBoardingMain(onBoarding: $onBoarding)
+            }
+            
+            
             TabView(selection: $selection) {
                 HomeView()
                     .tabItem {
@@ -56,9 +59,6 @@ struct MainView: View {
             /// 뷰가 로드될 때마다 userData 업데이트
             .onAppear {
                 userData = UserData()
-            }
-            .fullScreenCover(isPresented: $onBoarding) {
-                OnBoardingMain(onBoarding: $onBoarding)
             }
         }
     }

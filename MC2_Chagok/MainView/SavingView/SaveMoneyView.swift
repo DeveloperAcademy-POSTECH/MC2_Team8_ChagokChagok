@@ -25,7 +25,9 @@ struct SaveMoneyView: View {
     /// 기존 저장된 값과 입력된 값을 저장하기 위한 UserData
     @State var goalMoney = UserDefaults.standard.integer(forKey: "realGoalMoney")
     @State var userData = UserData()
-        
+    
+    @FocusState private var moneyFocus: Bool
+            
     var body: some View {
         
         /// 실시간 받는 money 값을 사용하기 위한 변수, String으로 받아버렸기 때문에 옵셔널 채이닝 필요
@@ -49,6 +51,7 @@ struct SaveMoneyView: View {
                 
                 /// 텍스트필드와 애니메이션 영역
                 TextField("", text: $money)
+                    .focused($moneyFocus)
                     .foregroundColor(savedMoney > goalMoney ? .red : .black)
                     .frame(width: 320, height: 50)
                     .keyboardType(.numberPad)
@@ -92,6 +95,11 @@ struct SaveMoneyView: View {
                             .foregroundColor(Color(.systemGray5))
                         ,alignment: .bottom
                     )
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                            self.moneyFocus = true
+                        }
+                    }
                     .padding(.top)
                         
                 

@@ -23,6 +23,8 @@ struct SaveMessageView: View {
     /// 홈뷰부터 새로 고쳐진 randomQuestion 값을 사용하기 위한 바인딩
     @Binding var randomQuestion: String
     
+    @FocusState private var messageFocus: Bool
+
     
     var body: some View {
         ZStack {
@@ -44,6 +46,7 @@ struct SaveMessageView: View {
                 /// 텍스트 필드 뷰
                 ZStack(alignment: .topTrailing) {
                     TextField("답변을 입력해주세요 (70자 이내)", text: $message, axis: .vertical)
+                        .focused($messageFocus)
                         .onChange(of: message) { newValue in
                             if message.count > 70 {
                                 message = String(message.prefix(70))
@@ -64,6 +67,11 @@ struct SaveMessageView: View {
                         .foregroundColor(.gray)
                         .font(.caption2)
                         .padding()
+                }
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        self.messageFocus = true
+                    }
                 }
                 .padding(.top)
                 

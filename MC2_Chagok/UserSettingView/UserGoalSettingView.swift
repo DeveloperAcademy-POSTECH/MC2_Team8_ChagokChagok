@@ -19,6 +19,8 @@ struct UserGoalSettingView: View {
     @State var navigateContentView = false
     @Binding var navigateGoalSettingView: Bool
     
+    @FocusState var goalMoneyfocus: Bool
+    
     var body: some View {
         ZStack {
             Color.appBeige.ignoresSafeArea()
@@ -42,6 +44,7 @@ struct UserGoalSettingView: View {
                 
                 VStack(alignment: .leading, spacing: 0) {
                     TextField("", text: $goalMoney)
+                        .focused($goalMoneyfocus)
                         .foregroundColor(.clear)
                         .frame(width: 320, height: 40)
                         .keyboardType(.numberPad)
@@ -76,6 +79,11 @@ struct UserGoalSettingView: View {
                         .opacity(goalDay.timeIntervalSinceNow > 0 ? 1 : 0)
                         .offset(y : goalDay.timeIntervalSinceNow > 0 ? 0 : -20)
                         .animation(.easeInOut(duration: 0.5), value: goalDay.timeIntervalSinceNow > 0)
+                        .onAppear {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                self.goalMoneyfocus = true
+                            }
+                        }
                 }
                 Spacer()
             }
