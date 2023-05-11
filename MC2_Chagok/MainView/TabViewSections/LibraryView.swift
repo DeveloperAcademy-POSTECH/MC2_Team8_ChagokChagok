@@ -16,9 +16,9 @@ struct LibraryView: View {
             VStack(alignment: .leading) {
                 VStack(alignment: .leading) {
                     Text("내가 목표 달성 기록들")
-                        .font(.title2)
+                        .font(.title)
                         .bold()
-                        .padding(.top, 30)
+                        .padding(.top, 50)
                         .padding(.bottom, 1)
                     Text("차곡차곡 채워서 잠겨있는 기록들을 깨보세요!")
                         .padding(.bottom, 20)
@@ -36,8 +36,8 @@ struct LibraryView: View {
                                             .resizable()
                                             .scaledToFit()
                                             .frame(width: 102)
-                                        Text("\((column + 1 + row * 3))00만원 이상 채웠어요")
-                                            .font(.system(size: 8))
+                                        Text("\((column + 1 + row * 3))00만원")
+                                            .font(.caption)
                                             .foregroundColor(.gray)
                                     }
                                 }
@@ -47,7 +47,7 @@ struct LibraryView: View {
                             .fontWeight(.semibold)
                             .frame(width: 330, alignment: .leading)
                             .padding(.top)
-                        ForEach(0..<2) { row in
+                        ForEach(0..<1) { row in
                             HStack {
                                 ForEach(0..<3) { column in
                                     VStack(spacing: 0) {
@@ -56,7 +56,7 @@ struct LibraryView: View {
                                             .scaledToFit()
                                             .frame(width: 102)
                                         Text("\((column + 1 + row * 3))번 이상 보냈어요")
-                                            .font(.system(size: 8))
+                                            .font(.caption)
                                             .foregroundColor(.gray)
                                     }
                                 }

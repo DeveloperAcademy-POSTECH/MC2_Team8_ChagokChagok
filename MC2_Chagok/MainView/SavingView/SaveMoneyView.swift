@@ -45,7 +45,7 @@ struct SaveMoneyView: View {
                 Text("오늘도 채워볼까요?")
                     .frame(width: 320, alignment: .leading)
                     .fontWeight(.bold)
-                    .font(.title2)
+                    .font(.title)
                     .padding(.top, 50)
                     .padding(.bottom, 10)
                 
@@ -106,9 +106,9 @@ struct SaveMoneyView: View {
                 /// 남은 금액 표시
                 Text("남은 금액보다 높게 입력했어요")
                     .foregroundColor(savedMoney > goalMoney - userData.total ? .red : .appBeige)
-                    .font(.caption2)
+                    .font(.callout)
                     .padding(.top, 7)
-                    .offset(y: savedMoney > goalMoney - userData.total ? 0 : 2)
+                    .offset(y: savedMoney > goalMoney - userData.total ? -2 : 0)
                     .animation(.easeIn(duration: 0.3), value: savedMoney > goalMoney - userData.total)
                 Spacer()
             }

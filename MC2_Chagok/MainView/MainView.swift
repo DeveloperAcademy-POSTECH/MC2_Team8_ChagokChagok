@@ -54,7 +54,6 @@ struct MainView: View {
             .navigationBarBackButtonHidden()
             .background(Color.appBeige.ignoresSafeArea())
             .accentColor(.appRed)
-            .fontDesign(.rounded)
             
             /// 뷰가 로드될 때마다 userData 업데이트
             .onAppear {

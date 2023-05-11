@@ -37,9 +37,9 @@ struct UserRegistrationView: View {
                     /// 최상단의 페이지 이름
                     Text(swiftNamePopup != true || tylerName.isEmpty ? "이름을 알려주세요" : "애인의 이름을 알려주세요")
                         .fontWeight(.bold)
-                        .font(.title2)
+                        .font(.title)
                         .padding(.top, 95)
-                        .padding(.bottom, 10)
+                        .padding(.bottom, 24)
                     
                     
                     VStack {
@@ -50,9 +50,9 @@ struct UserRegistrationView: View {
                             .frame(width: 320, height: 40)
                             .background(
                                 Text("내 이름")
-                                    .foregroundColor(tylerName.isEmpty ? Color(.systemGray4) : .gray)
-                                    .font(tylerName.isEmpty ? .body : .caption)
-                                    .offset(y: tylerName.isEmpty ? 0 : -20)
+                                    .foregroundColor(tylerName.isEmpty ? Color(.systemGray4) : .appGray)
+                                    .font(tylerName.isEmpty ? .body : .callout)
+                                    .offset(y: tylerName.isEmpty ? 0 : -25)
                                     .animation(.easeInOut(duration: 0.3), value: tylerName.isEmpty)
                                 ,alignment: .leading
                             )
@@ -75,6 +75,7 @@ struct UserRegistrationView: View {
                                 }
                             }
                             .padding(.vertical)
+                            .padding(.bottom)
                         
                         /// 애인 이름 입력란
                         TextField("", text: $swiftName)
@@ -82,9 +83,9 @@ struct UserRegistrationView: View {
                             .frame(width: 320, height: 40)
                             .background(
                                 Text("애인 이름")
-                                    .foregroundColor(swiftName.isEmpty ? Color(.systemGray4) : .gray)
-                                    .font(swiftName.isEmpty ? .body : .caption)
-                                    .offset(y: swiftName.isEmpty ? 0 : -20)
+                                    .foregroundColor(swiftName.isEmpty ? Color(.systemGray4) : .appGray)
+                                    .font(swiftName.isEmpty ? .body : .callout)
+                                    .offset(y: swiftName.isEmpty ? 0 : -25)
                                     .animation(.easeInOut(duration: 0.3), value: swiftName.isEmpty)
                                 ,alignment: .leading
                             )

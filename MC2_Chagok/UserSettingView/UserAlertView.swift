@@ -26,11 +26,12 @@ struct UserAlertView: View {
             VStack {
                 VStack(alignment: .leading) {
                     Text("\(dateFormatter.string(from: goalDay))까지\n\((Int(goalMoney) ?? 0)/10000)만원\n차곡차곡 쌓아봐요!")
-                        .font(.title2)
+                        .font(.title)
                         .bold()
                         .padding(.top, 50)
                         .padding(.bottom, 10)
                     Text("이 목표는 달성할 때까지 수정할 수 없어요")
+                        .font(.title3)
                         .foregroundColor(.appRed)
                         .fontWeight(.semibold)
                         .padding(.top)

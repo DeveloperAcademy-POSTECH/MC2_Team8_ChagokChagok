@@ -25,7 +25,7 @@ struct SaveAlertView: View {
             Color.appBeige.ignoresSafeArea()
             VStack(alignment: .leading) {
                 Text("\(Int(money) ?? 0)원과 편지를\n차곡차곡\n우체통에 채워둘게요!")
-                    .font(.title2)
+                    .font(.title)
                     .bold()
                     .padding(.top, 50)
                     .padding(.bottom, 10)
@@ -33,6 +33,7 @@ struct SaveAlertView: View {
                     .foregroundColor(.appRed)
                     .fontWeight(.semibold)
                     .padding(.top)
+                    .font(.title3)
                 
                 Spacer()
                 Image("SaveAlert")

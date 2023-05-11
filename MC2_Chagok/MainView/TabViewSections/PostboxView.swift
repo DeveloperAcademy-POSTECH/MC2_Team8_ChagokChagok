@@ -18,9 +18,9 @@ struct PostboxView: View {
             VStack {
                 VStack(alignment: .leading) {
                     Text("우체통 안 편지들")
-                        .font(.title2)
+                        .font(.title)
                         .bold()
-                        .padding(.top, 30)
+                        .padding(.top, 50)
                         .padding(.bottom, 1)
                     Text("\(userData.userdata.count)장 채웠어요")
                         .padding(.bottom, 20)

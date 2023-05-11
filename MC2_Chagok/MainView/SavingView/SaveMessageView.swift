@@ -129,6 +129,6 @@ struct SaveMessageView: View {
 
 struct SaveMessageView_Previews: PreviewProvider {
     static var previews: some View {
-        SaveMessageView(navigateSaveMoneyView: .constant(true), navigateSaveMessageView: .constant(true), money: .constant(""), randomQuestion: .constant("진심으로 미안했지만 제대로 사과하지 못했던 순간이 있나요? 지금 이 기회를 빌려, tyler의 진심을 전해주세요."))
+        SaveMessageView(navigateSaveMoneyView: .constant(true), navigateSaveMessageView: .constant(true), money: .constant(""), randomQuestion: .constant("진심으로 미안했지만 제대로 사과하지 못했던 순간이 있나요?\n지금 이 기회를 빌려, tyler의 진심을 전해주세요."))
     }
 }

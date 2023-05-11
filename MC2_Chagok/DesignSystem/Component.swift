@@ -34,9 +34,7 @@ struct Component: View {
                 }
                 CustomSmallBeigeButton(label: "Beige") {
                 }
-                
             }
-            
         }
     }
 }
@@ -119,8 +117,8 @@ struct CustomButton: View {
                 .frame(width: 330, height: 60)
                 .background(
                     RoundedRectangle(cornerRadius: 20, style: .continuous)
-                        .fill(disable ? Color(.systemGray) : Color.appRed)
-                        .shadow(color:Color(.systemGray3),radius: 5,y: 5)
+                        .fill(Color.appRed)
+                        .shadow(color: Color.appShadow, radius: 5,y: 5)
                 )
         }
         .buttonStyle(.plain)
@@ -142,8 +140,8 @@ struct CustomBeigeButton: View {
                 .frame(width: 330, height: 60)
                 .background(
                     RoundedRectangle(cornerRadius: 20, style: .continuous)
-                        .fill(disable ? Color(.systemGray) : Color.appDarkBeige)
-                        .shadow(color:Color(.systemGray3),radius: 5,y: 5)
+                        .fill(Color.appDarkBeige)
+                        .shadow(color: Color.appShadow,radius: 5,y: 5)
                 )
         }
         .buttonStyle(.plain)
@@ -165,7 +163,7 @@ struct CustomLongButton: View {
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity)
                 .frame(height: 60)
-                .background(disable ? Color(.systemGray) : Color.appRed)
+                .background(Color.appRed)
         }
         .buttonStyle(.plain)
         .disabled(disable)

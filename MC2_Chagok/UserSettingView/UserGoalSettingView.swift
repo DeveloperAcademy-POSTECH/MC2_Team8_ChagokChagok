@@ -26,13 +26,13 @@ struct UserGoalSettingView: View {
                 Text(goalDay.timeIntervalSinceNow < 0 ? "언제까지 모아야 하나요?" : "얼마를 모아야 하나요?")
                     .frame(width: 320, alignment: .leading)
                     .fontWeight(.bold)
-                    .font(.title2)
+                    .font(.title)
                     .padding(.top, 50)
                     .padding(.bottom, 10)
                 VStack(alignment: .leading, spacing: 0) {
                     Text("목표 날짜")
-                        .font(.caption2)
-                        .foregroundColor(.gray)
+                        .font(.callout)
+                        .foregroundColor(.appGray)
                         .padding(.top)
                     DatePicker(selection: $goalDay, in: Date.now..., displayedComponents: .date) {
                     }
@@ -55,9 +55,9 @@ struct UserGoalSettingView: View {
                         )
                         .background(
                             Text("목표 금액")
-                                .foregroundColor(goalMoney.isEmpty ? Color(.systemGray4) : .gray)
-                                .font(goalMoney.isEmpty ? .body : .caption)
-                                .offset(y: goalMoney.isEmpty ? 0 : -20)
+                                .foregroundColor(goalMoney.isEmpty ? Color(.systemGray4) : .appGray)
+                                .font(goalMoney.isEmpty ? .body : .callout)
+                                .offset(y: goalMoney.isEmpty ? 0 : -25)
                                 .animation(.easeInOut(duration: 0.3), value: goalMoney.isEmpty)
                             ,alignment: .leading
                         )
