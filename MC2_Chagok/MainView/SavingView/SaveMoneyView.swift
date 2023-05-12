@@ -51,13 +51,17 @@ struct SaveMoneyView: View {
                 
                 /// 텍스트필드와 애니메이션 영역
                 TextField("", text: $money)
+                    .offset(x: Int(money) ?? 0 >= 1000 ? 3.5 : 0)
+                    .offset(x: Int(money) ?? 0 >= 1000000 ? 3.5 : 0)
+                    .offset(x: Int(money) ?? 0 >= 1000000000 ? 3.5 : 0)
                     .focused($moneyFocus)
-                    .foregroundColor(savedMoney > goalMoney ? .red : .black)
+                    .foregroundColor(.clear)
                     .frame(width: 320, height: 50)
                     .keyboardType(.numberPad)
                     .background(
                         Group {
-                            Text("\(money)").foregroundColor(.clear)
+                            Text("\(Int(money) ?? 0)")
+                                .foregroundColor(savedMoney > goalMoney ? .red : .black)
                             + Text(" 원")
                         }
                             .opacity(money.isEmpty ? 0 : 1)

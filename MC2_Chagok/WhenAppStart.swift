@@ -9,18 +9,20 @@ import SwiftUI
 
 struct WhenAppStart: View {
     var body: some View {
-        
-        /// 유저가 처음시작인지 체크를 위한 뷰
-        let goalMoney = UserDefaults.standard.integer(forKey: "realGoalMoney")
-
-        /// 유저가 시작할때 Goal을 정했는지 안했는지 체크
-        if goalMoney > 0 {
-            NavigationStack {
-                MainView()
+        ZStack {
+            Color.appBeige.ignoresSafeArea()
+            /// 유저가 처음시작인지 체크를 위한 뷰
+            let goalMoney = UserDefaults.standard.integer(forKey: "realGoalMoney")
+            
+            /// 유저가 시작할때 Goal을 정했는지 안했는지 체크
+            if goalMoney > 0 {
+                NavigationStack {
+                    MainView()
+                }
+                .tint(.appRed)
+            } else {
+                UserRegistrationView()
             }
-            .tint(.appRed)
-        } else {
-            UserRegistrationView()
         }
     }
 }

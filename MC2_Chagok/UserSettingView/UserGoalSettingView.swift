@@ -42,6 +42,9 @@ struct UserGoalSettingView: View {
                 
                 VStack(alignment: .leading, spacing: 0) {
                     TextField("", text: $goalMoney)
+                        .offset(x: Int(goalMoney) ?? 0 >= 1000 ? 3.5 : 0)
+                        .offset(x: Int(goalMoney) ?? 0 >= 1000000 ? 3.5 : 0)
+                        .offset(x: Int(goalMoney) ?? 0 >= 1000000000 ? 3.5 : 0)
                         .focused($goalMoneyfocus)
                         .foregroundColor(.clear)
                         .frame(width: 320, height: 40)

@@ -11,6 +11,7 @@ import UIKit
 
 
 /// 비디오 백그라운드 뷰
+
 struct VideoBackGroundView: View{
     
     var body: some View{
@@ -64,10 +65,10 @@ fileprivate class LoopingVideoPlayerUIView: UIView{
             }
             return postboxImageName
         }
-
+        
         let video = ["0-20","20-40","40-60","60-80","80-100"]
         
-        var videoFile = Bundle.main.url(forResource: video[postboxImageNames(userData: UserData(), goalMoney: UserDefaults.standard.integer(forKey: "realGoalMoney"))], withExtension: "mp4")!
+        let videoFile = Bundle.main.url(forResource: video[postboxImageNames(userData: UserData(), goalMoney: UserDefaults.standard.integer(forKey: "realGoalMoney"))], withExtension: "mp4")!
         let playerItem = AVPlayerItem(url:videoFile)
         
         /// 플레이어 세팅하기 : 여기서는 한 개만 반복 중
@@ -96,5 +97,4 @@ fileprivate class LoopingVideoPlayerUIView: UIView{
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }
