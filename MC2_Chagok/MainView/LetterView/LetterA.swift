@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct LetterA: View {
-
+    
+    @State var userData = UserData()
+    
     var body: some View {
+        
         ZStack{
             Image("PostBackground")
             
@@ -27,7 +30,7 @@ struct LetterA: View {
                 
                 HStack{
                     // Data - Question
-                    Text("스위프트를 처음 만났을 때 나의 감정은?")
+                    Text("ㅇㅇㅇ")
                         .font(.custom("GangwonEduSaeeum", size: 22))
                         .frame(width: 280, alignment: .leading)
                 }
