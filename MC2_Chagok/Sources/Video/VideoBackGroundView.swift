@@ -16,7 +16,6 @@ struct VideoBackGroundView: View{
     var body: some View{
         ZStack{
             LoopingVideoPlayerView().edgesIgnoringSafeArea(.all)
-            //            Color.blue
         }
     }
 }
@@ -44,7 +43,31 @@ fileprivate class LoopingVideoPlayerUIView: UIView{
     ///여기서 파일 가져온다
     override init(frame:CGRect){
         super.init(frame: frame)
-        let videoFile = Bundle.main.url(forResource: "mailBox", withExtension: "mp4")!
+        
+        func postboxImageNames(userData: UserData, goalMoney: Int) -> Int {
+            var postboxImageName = 0
+            let percent = goalMoney > 0 ? max(min(Double(userData.total) / Double(goalMoney) * 100, 100), 0) : 0
+            
+            switch percent {
+            case 0..<20:
+                postboxImageName = 0
+            case 20..<40:
+                postboxImageName = 1
+            case 40..<60:
+                postboxImageName = 2
+            case 60..<80:
+                postboxImageName = 3
+            case 80...100:
+                postboxImageName = 4
+            default:
+                break
+            }
+            return postboxImageName
+        }
+
+        let video = ["0-20","20-40","40-60","60-80","80-100"]
+        
+        var videoFile = Bundle.main.url(forResource: video[postboxImageNames(userData: UserData(), goalMoney: UserDefaults.standard.integer(forKey: "realGoalMoney"))], withExtension: "mp4")!
         let playerItem = AVPlayerItem(url:videoFile)
         
         /// 플레이어 세팅하기 : 여기서는 한 개만 반복 중
