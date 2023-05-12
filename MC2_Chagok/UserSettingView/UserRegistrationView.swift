@@ -20,6 +20,8 @@ struct UserRegistrationView: View {
     /// 내 이름을 입력한 뒤에 스위프트 이름을 표시하기 위한 변수입니다.
     @State private var swiftNamePopup = false
     
+    @State private var onBoarding = true
+    
     @FocusState private var tylernameFocus: Bool
     @FocusState private var swiftnameFocus: Bool
     
@@ -69,11 +71,11 @@ struct UserRegistrationView: View {
                                     .foregroundColor(Color(.systemGray5))
                                 ,alignment: .bottom
                             )
-                            .onAppear {
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                    self.tylernameFocus = true
-                                }
-                            }
+//                            .onAppear {
+//                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+//                                    self.tylernameFocus = true
+//                                }
+//                            }
                             .padding(.vertical)
                             .padding(.bottom)
                         
@@ -138,6 +140,10 @@ struct UserRegistrationView: View {
             }
         }
         .tint(.appRed)
+        .fullScreenCover(isPresented: $onBoarding) {
+            OnBoardingMain(onBoarding: $onBoarding)
+        }
+
     }
 }
 

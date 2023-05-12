@@ -9,7 +9,20 @@ import SwiftUI
 
 struct OnBoardingFirstView: View {
     var body: some View {
-        Text("OnBoardingFirstView")
+        ZStack {
+            VStack {
+                Text("설레는 데이트 날을 위해\n목표금액을 설정하세요")
+                    .font(.title2)
+                    .bold()
+                    .padding(.vertical, 95)
+                    .lineSpacing(5)
+                Image("OnBoardingFirst")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 250)
+                Spacer()
+            }
+        }
     }
 }
 

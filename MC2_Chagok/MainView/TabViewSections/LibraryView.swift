@@ -35,8 +35,8 @@ struct LibraryView: View {
                                         Image("LockImage")
                                             .resizable()
                                             .scaledToFit()
-                                            .frame(width: 102)
-                                        Text("\((column + 1 + row * 3))00만원")
+                                            .frame(width: 110)
+                                        Text("\((column + 1 + row * 3)),000,000원")
                                             .font(.caption)
                                             .foregroundColor(.gray)
                                     }
@@ -47,15 +47,15 @@ struct LibraryView: View {
                             .fontWeight(.semibold)
                             .frame(width: 330, alignment: .leading)
                             .padding(.top)
-                        ForEach(0..<1) { row in
+                        ForEach(0..<3) { row in
                             HStack {
                                 ForEach(0..<3) { column in
                                     VStack(spacing: 0) {
                                         Image("LockImage")
                                             .resizable()
                                             .scaledToFit()
-                                            .frame(width: 102)
-                                        Text("\((column + 1 + row * 3))번 이상 보냈어요")
+                                            .frame(width: 110)
+                                        Text("\((column + 1 + row * 3))묶음")
                                             .font(.caption)
                                             .foregroundColor(.gray)
                                     }

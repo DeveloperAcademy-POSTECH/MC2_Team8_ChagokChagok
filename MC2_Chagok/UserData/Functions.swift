@@ -46,3 +46,24 @@ func postboxImageName(userData: UserData, goalMoney: Int) -> Image {
     }
     return Image(postboxImageName)
 }
+
+func postboxVideo(userData: UserData, goalMoney: Int) -> String {
+    var postboxVideo = "hello world"
+    let percent = goalMoney > 0 ? max(min(Double(userData.total) / Double(goalMoney) * 100, 100), 0) : 0
+    
+    switch percent {
+    case 0..<20:
+        postboxVideo = "1"
+    case 20..<40:
+        postboxVideo = "2"
+    case 40..<60:
+        postboxVideo = "3"
+    case 60..<80:
+        postboxVideo = "4"
+    case 80...100:
+        postboxVideo = "5"
+    default:
+        break
+    }
+    return postboxVideo
+}
