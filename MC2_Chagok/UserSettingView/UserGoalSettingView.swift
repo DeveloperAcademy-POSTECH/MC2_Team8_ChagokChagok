@@ -12,7 +12,6 @@ struct UserGoalSettingView: View {
     @State private var goalDay = Date()
     @State private var showPicker = false
     
-    @State private var alert = false
     @State var userAlertView = false
     @State var navigateContentView = false
     @Binding var navigateGoalSettingView: Bool

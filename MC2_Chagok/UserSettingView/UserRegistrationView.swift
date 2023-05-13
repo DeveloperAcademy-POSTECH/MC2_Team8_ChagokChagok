@@ -71,11 +71,6 @@ struct UserRegistrationView: View {
                                     .foregroundColor(Color(.systemGray5))
                                 ,alignment: .bottom
                             )
-//                            .onAppear {
-//                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-//                                    self.tylernameFocus = true
-//                                }
-//                            }
                             .padding(.vertical)
                             .padding(.bottom)
                         
@@ -142,6 +137,9 @@ struct UserRegistrationView: View {
         .tint(.appRed)
         .fullScreenCover(isPresented: $onBoarding) {
             OnBoardingMain(onBoarding: $onBoarding)
+                .onDisappear {
+                    tylernameFocus = true
+                }
         }
 
     }

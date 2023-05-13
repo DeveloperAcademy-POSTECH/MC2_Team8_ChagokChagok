@@ -30,7 +30,7 @@ struct LetterC: View {
                 
                 HStack{
                     // Data - Image
-                    Image("Image_1")
+                    Image("Image")
                 }
                 
                 Spacer()
@@ -46,14 +46,12 @@ struct LetterC: View {
                 Spacer()
                     .frame(height: 40)
                 
-                HStack{
-                    // Data - Contents
-                    Text("찾아다녀도, 어디 끓는 구하지 아니다. 찬미를 청춘을 생명을 영원히 인류의 봄바람이다. 끓는 든 길을 크고 소금이라 관현악이며, 반짝이는 할지니. 그렇지 아니한가?")
-                        .font(.custom("GangwonEduSaeeum", size: 20))
-                        .lineSpacing(33)
-                        .frame(width: 280)
-                        .opacity(0.6)
-                }
+                // Data - Contents
+                Text("찾아다녀도, 어디 끓는 구하지 아니다. 찬미를 청춘을 생명을 영원히 인류의 봄바람이다. 끓는 든 길을 크고 소금이라 관현악이며, 반짝이는 할지니. 그렇지 아니한가?")
+                    .font(.custom("GangwonEduSaeeum", size: 20))
+                    .lineSpacing(33)
+                    .frame(width: 280, height: 200, alignment: .topLeading)
+                    .opacity(0.6)
                 
                 Spacer()
                     .frame(height: 50)

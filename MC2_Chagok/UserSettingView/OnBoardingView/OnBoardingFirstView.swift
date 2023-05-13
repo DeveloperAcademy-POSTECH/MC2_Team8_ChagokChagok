@@ -12,10 +12,11 @@ struct OnBoardingFirstView: View {
         ZStack {
             VStack {
                 Text("설레는 데이트 날을 위해\n목표금액을 설정하세요")
-                    .font(.title2)
+                    .font(.title)
                     .bold()
-                    .padding(.vertical, 95)
+                    .padding(.vertical, 90)
                     .lineSpacing(5)
+                    .frame(width: 310, alignment: .leading)
                 Image("OnBoardingFirst")
                     .resizable()
                     .scaledToFit()

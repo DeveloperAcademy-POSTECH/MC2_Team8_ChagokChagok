@@ -26,11 +26,12 @@ struct HomeView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(height: 390)
+                
                 /// 애니메이션
-                    .onTapGesture {
-                        counter += 1
-                    }
-                    .confettiCannon(counter: $counter)
+//                    .onTapGesture {
+//                        counter += 1
+//                    }
+//                    .confettiCannon(counter: $counter)
                 
                 Spacer()
                 Spacer()
@@ -84,16 +85,8 @@ struct HomeCardView: View {
             .tint(Color.appPink)
             
             /// 글귀
-            Group {
-                Text("편지를 보낼 날까지 ")
-                + Text("\(dday)일")
-                    .bold()
-                + Text(" 남았어요\n")
-                + Text("남은 ")
-                + Text("\((goalMoney-userData.total)/10000)만원")
-                    .bold()
-                + Text(" 도 힘내서 모아봐요")
-            }
+            Text("편지를 보낼 날까지 **\(dday)일** 남았어요\n남은 **\((goalMoney-userData.total)/10000)만원** 도 힘내서 모아봐요")
+                .multilineTextAlignment(.center)
         }
         .onAppear {
             userData = UserData()

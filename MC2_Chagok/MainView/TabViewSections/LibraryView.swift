@@ -9,6 +9,9 @@ import SwiftUI
 
 struct LibraryView: View {
     
+    @State var animation = false
+    @State var userData = UserData()
+    
     var body: some View {
         ZStack {
             Color.appBeige
@@ -26,19 +29,24 @@ struct LibraryView: View {
                         .foregroundColor(.appGray)
                     ScrollView {
                         Text("우체통에 이만큼 채웠어요")
+                            .font(.title3)
                             .fontWeight(.semibold)
                             .frame(width: 330, alignment: .leading)
-                        ForEach(0..<3) { row in
-                            HStack {
-                                ForEach(0..<3) { column in
-                                    VStack(spacing: 0) {
-                                        Image("LockImage")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .frame(width: 110)
-                                        Text("\((column + 1 + row * 3)),000,000원")
-                                            .font(.caption)
-                                            .foregroundColor(.gray)
+                        VStack (spacing: 3) {
+                            ForEach(0..<2) { row in
+                                HStack {
+                                    ForEach(0..<3) { column in
+                                        VStack(spacing: 0) {
+                                            Image(openMoneyReward(column: column, row: row, usertotal: userData.total))
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 110)
+                                            
+                                            /// 1, 2, 4, 7, 11, 16을 표현하기 위한 식
+                                            Text("\((column + 1 + row * 3)*(column + 1 + row * 3 - 1) / 2 + 1)00만원")
+                                                .foregroundColor(.appGray)
+                                                .font(.callout)
+                                        }
                                     }
                                 }
                             }
@@ -46,25 +54,27 @@ struct LibraryView: View {
                         Text("편지 묶음을 이만큼 보냈어요")
                             .fontWeight(.semibold)
                             .frame(width: 330, alignment: .leading)
+                            .font(.title3)
                             .padding(.top)
-                        ForEach(0..<3) { row in
-                            HStack {
-                                ForEach(0..<3) { column in
-                                    VStack(spacing: 0) {
-                                        Image("LockImage")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .frame(width: 110)
-                                        Text("\((column + 1 + row * 3))묶음")
-                                            .font(.caption)
-                                            .foregroundColor(.gray)
+                        VStack (spacing: 3) {
+                            ForEach(0..<2) { row in
+                                HStack {
+                                    ForEach(0..<3) { column in
+                                        VStack(spacing: 0) {
+                                            Image("LockImage")
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 110)
+                                            Text("\((column + 1 + row * 3)*(column + 1 + row * 3 - 1) / 2 + 1)통")
+                                                .foregroundColor(.appGray)
+                                                .font(.callout)
+                                        }
                                     }
                                 }
                             }
                         }
                     }
                 }
-                
                 Spacer()
             }
         }

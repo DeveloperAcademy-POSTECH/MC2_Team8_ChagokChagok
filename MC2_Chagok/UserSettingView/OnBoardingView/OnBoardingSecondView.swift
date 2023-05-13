@@ -12,10 +12,11 @@ struct OnBoardingSecondView: View {
         ZStack {
             VStack {
                 Text("마음을 담은 돈과 편지를\n우체통에 채워보세요")
-                    .font(.title2)
+                    .font(.title)
                     .bold()
-                    .padding(.vertical, 95)
+                    .padding(.vertical, 90)
                     .lineSpacing(5)
+                    .frame(width: 310, alignment: .leading)
                 Image("OnBoardingSecond")
                     .resizable()
                     .scaledToFit()

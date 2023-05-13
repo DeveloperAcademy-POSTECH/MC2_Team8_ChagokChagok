@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		292863472A0EAF1300F8C48A /* ResettingGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292863462A0EAF1300F8C48A /* ResettingGoalView.swift */; };
+		292863492A103F1200F8C48A /* UserGoalSettingAgainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292863482A103F1100F8C48A /* UserGoalSettingAgainView.swift */; };
 		297D4D5A2A0B593D000CD018 /* MC2_ChagokApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4D592A0B593D000CD018 /* MC2_ChagokApp.swift */; };
 		297D4D5E2A0B593E000CD018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 297D4D5D2A0B593E000CD018 /* Assets.xcassets */; };
 		297D4D612A0B593E000CD018 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 297D4D602A0B593E000CD018 /* Preview Assets.xcassets */; };
@@ -44,9 +46,14 @@
 		297F7C8C2A0C97160044B50C /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297F7C8B2A0C97160044B50C /* FontHelper.swift */; };
 		297F7C902A0C976B0044B50C /* GangwonEduSaeeum.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 297F7C8F2A0C976B0044B50C /* GangwonEduSaeeum.ttf */; };
 		297F7C982A0DDD930044B50C /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297F7C972A0DDD930044B50C /* SuccessView.swift */; };
+		297F7C9B2A0E11B70044B50C /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 297F7C9A2A0E11B70044B50C /* Lottie */; };
+		297F7C9E2A0E11F20044B50C /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297F7C9D2A0E11F10044B50C /* LottieView.swift */; };
+		297F7CA02A0E16E40044B50C /* popUpConfetti.json in Resources */ = {isa = PBXBuildFile; fileRef = 297F7C9F2A0E16E40044B50C /* popUpConfetti.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		292863462A0EAF1300F8C48A /* ResettingGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResettingGoalView.swift; sourceTree = "<group>"; };
+		292863482A103F1100F8C48A /* UserGoalSettingAgainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGoalSettingAgainView.swift; sourceTree = "<group>"; };
 		297D4D562A0B593D000CD018 /* MC2_Chagok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MC2_Chagok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		297D4D592A0B593D000CD018 /* MC2_ChagokApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC2_ChagokApp.swift; sourceTree = "<group>"; };
 		297D4D5D2A0B593E000CD018 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,6 +93,8 @@
 		297F7C8F2A0C976B0044B50C /* GangwonEduSaeeum.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GangwonEduSaeeum.ttf; sourceTree = "<group>"; };
 		297F7C962A0C9B530044B50C /* MC2-Chagok-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MC2-Chagok-Info.plist"; sourceTree = SOURCE_ROOT; };
 		297F7C972A0DDD930044B50C /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
+		297F7C9D2A0E11F10044B50C /* LottieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		297F7C9F2A0E16E40044B50C /* popUpConfetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = popUpConfetti.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				297F7C9B2A0E11B70044B50C /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				297D4DE82A0BFA51000CD018 /* FailPopupView.swift */,
+				292863462A0EAF1300F8C48A /* ResettingGoalView.swift */,
+				292863482A103F1100F8C48A /* UserGoalSettingAgainView.swift */,
 			);
 			path = FailView;
 			sourceTree = "<group>";
@@ -257,6 +269,7 @@
 			children = (
 				297D4DDF2A0B7C4D000CD018 /* Video */,
 				297D4DB52A0B7B73000CD018 /* EffectSources */,
+				297F7C9C2A0E11F10044B50C /* LottieAnimation */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -304,6 +317,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		297F7C9C2A0E11F10044B50C /* LottieAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				297F7C9F2A0E16E40044B50C /* popUpConfetti.json */,
+				297F7C9D2A0E11F10044B50C /* LottieView.swift */,
+			);
+			path = LottieAnimation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -320,6 +342,9 @@
 			dependencies = (
 			);
 			name = MC2_Chagok;
+			packageProductDependencies = (
+				297F7C9A2A0E11B70044B50C /* Lottie */,
+			);
 			productName = MC2_Chagok;
 			productReference = 297D4D562A0B593D000CD018 /* MC2_Chagok.app */;
 			productType = "com.apple.product-type.application";
@@ -341,13 +366,17 @@
 			};
 			buildConfigurationList = 297D4D512A0B593D000CD018 /* Build configuration list for PBXProject "MC2_Chagok" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ko;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = 297D4D4D2A0B593D000CD018;
+			packageReferences = (
+				297F7C992A0E11B70044B50C /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 297D4D572A0B593D000CD018 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -364,6 +393,7 @@
 			files = (
 				297D4D612A0B593E000CD018 /* Preview Assets.xcassets in Resources */,
 				297D4D5E2A0B593E000CD018 /* Assets.xcassets in Resources */,
+				297F7CA02A0E16E40044B50C /* popUpConfetti.json in Resources */,
 				297F7C902A0C976B0044B50C /* GangwonEduSaeeum.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,9 +410,11 @@
 				297F7C982A0DDD930044B50C /* SuccessView.swift in Sources */,
 				297D4DEB2A0BFABA000CD018 /* SuccessPopupView.swift in Sources */,
 				297D4DDC2A0B7B73000CD018 /* Color.swift in Sources */,
+				292863472A0EAF1300F8C48A /* ResettingGoalView.swift in Sources */,
 				297D4DA82A0B7A8B000CD018 /* MainView.swift in Sources */,
 				297D4DD92A0B7B73000CD018 /* Functions.swift in Sources */,
 				297D4DD22A0B7B73000CD018 /* HomeView.swift in Sources */,
+				292863492A103F1200F8C48A /* UserGoalSettingAgainView.swift in Sources */,
 				297D4D5A2A0B593D000CD018 /* MC2_ChagokApp.swift in Sources */,
 				297D4DAA2A0B7B15000CD018 /* WhenAppStart.swift in Sources */,
 				297D4DB22A0B7B2D000CD018 /* OnBoardingMain.swift in Sources */,
@@ -407,6 +439,7 @@
 				297D4DF22A0BFB70000CD018 /* LetterC.swift in Sources */,
 				297D4DD52A0B7B73000CD018 /* PostboxView.swift in Sources */,
 				297D4DD02A0B7B73000CD018 /* SlimRectangle.swift in Sources */,
+				297F7C9E2A0E11F20044B50C /* LottieView.swift in Sources */,
 				297D4DD42A0B7B73000CD018 /* VideoBackGroundView.swift in Sources */,
 				297D4DD12A0B7B73000CD018 /* ConfettiSwiftUI.swift in Sources */,
 			);
@@ -543,6 +576,8 @@
 				INFOPLIST_FILE = "MC2-Chagok-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "차곡차곡";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -553,7 +588,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "hyunjuntyler.MC2-Chagok";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -576,6 +611,8 @@
 				INFOPLIST_FILE = "MC2-Chagok-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "차곡차곡";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -586,7 +623,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "hyunjuntyler.MC2-Chagok";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -617,6 +654,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		297F7C992A0E11B70044B50C /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		297F7C9A2A0E11B70044B50C /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 297F7C992A0E11B70044B50C /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 297D4D4E2A0B593D000CD018 /* Project object */;
 }

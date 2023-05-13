@@ -65,7 +65,6 @@ struct SaveMoneyView: View {
                             + Text(" 원")
                         }
                             .opacity(money.isEmpty ? 0 : 1)
-                            .animation(.easeInOut(duration: 0.3), value: money.isEmpty)
                         ,alignment: .leading
                     )
                     .background(
