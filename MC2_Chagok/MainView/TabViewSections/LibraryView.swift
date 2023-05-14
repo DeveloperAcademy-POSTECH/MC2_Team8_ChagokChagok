@@ -61,7 +61,7 @@ struct LibraryView: View {
                                 HStack {
                                     ForEach(0..<3) { column in
                                         VStack(spacing: 0) {
-                                            Image("LockImage")
+                                            Image(openGoalReward(column: column, row: row, user: UserDefaults.standard.integer(forKey: "GoalClearCount")))
                                                 .resizable()
                                                 .scaledToFit()
                                                 .frame(width: 110)
@@ -77,6 +77,9 @@ struct LibraryView: View {
                 }
                 Spacer()
             }
+        }
+        .onAppear {
+            userData = UserData()
         }
     }
 }

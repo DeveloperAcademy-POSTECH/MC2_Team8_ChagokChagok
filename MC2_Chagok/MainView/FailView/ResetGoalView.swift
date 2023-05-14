@@ -35,7 +35,8 @@ struct ResetGoalView: View {
                         .padding(.top)
                     DatePicker(selection: $goalDay, in: Date.now..., displayedComponents: .date) {
                     }
-                    .frame(width: 110, height: 50)
+                    .fixedSize()
+                    .frame(height: 50)
                 }
                 .padding(.bottom)
                 

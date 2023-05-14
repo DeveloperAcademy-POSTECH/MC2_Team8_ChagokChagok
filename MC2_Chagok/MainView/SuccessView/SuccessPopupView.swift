@@ -25,6 +25,7 @@ struct SuccessPopUpView: View {
                 .shadow(radius: 10, x: 0, y: 10)
             
             lottieView(name: "popUpConfetti", loopMode: .loop)
+                .frame(width: 100, height: 100)
 
             VStack{
                 Text("🎉")
@@ -33,7 +34,8 @@ struct SuccessPopUpView: View {
                     .foregroundColor(.pink)
                     .padding(.vertical, 20)
                 Text("축하합니다!\n**목표**를 달성했어요!")
-                    .font(.headline)
+                    .font(.title3)
+                    .bold()
                     .multilineTextAlignment(.center)
                     .padding(.bottom, 40)
                 

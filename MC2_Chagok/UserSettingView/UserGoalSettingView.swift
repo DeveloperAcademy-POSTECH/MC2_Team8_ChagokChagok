@@ -36,9 +36,11 @@ struct UserGoalSettingView: View {
                         .foregroundColor(.appGray)
                         .padding(.top)
                     DatePicker(selection: $goalDay, in: Date.now..., displayedComponents: .date) {
+                        Text("")
                     }
                     .focused($datePicker)
-                    .frame(width: 110, height: 50)
+                    .fixedSize()
+                    .frame(height: 50)
                 }
                 .padding(.bottom)
                 
@@ -87,9 +89,9 @@ struct UserGoalSettingView: View {
             }
             .ignoresSafeArea(.keyboard)
             .tint(.appRed)
-//            .navigationDestination(isPresented: $navigateContentView) {
-//                MainView()
-//            }
+            .navigationDestination(isPresented: $navigateContentView) {
+                MainView()
+            }
             
             /// 네비게이션 바 Back Button Custom
             .navigationBarBackButtonHidden()

@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct LetterC: View {
+    
+    @State var userData = UserData()
+    let user: User
+    let imageC: Int
 
     var body: some View {
         ZStack{
@@ -26,19 +30,19 @@ struct LetterC: View {
                 }
                 
                 Spacer()
-                    .frame(height: 20)
+                    .frame(height: 45)
                 
                 HStack{
                     // Data - Image
-                    Image("Image")
+                    Image("\(imageC)")
                 }
                 
                 Spacer()
-                    .frame(height: 40)
+                    .frame(height: 30)
                 
                 HStack{
                     // Data - Question
-                    Text("스위프트를 처음 만났을 때 나의 감정은?")
+                    Text("\(user.question)")
                         .font(.custom("GangwonEduSaeeum", size: 22))
                         .frame(width: 280, alignment: .leading)
                 }
@@ -47,7 +51,7 @@ struct LetterC: View {
                     .frame(height: 40)
                 
                 // Data - Contents
-                Text("찾아다녀도, 어디 끓는 구하지 아니다. 찬미를 청춘을 생명을 영원히 인류의 봄바람이다. 끓는 든 길을 크고 소금이라 관현악이며, 반짝이는 할지니. 그렇지 아니한가?")
+                Text("\(user.message)")
                     .font(.custom("GangwonEduSaeeum", size: 20))
                     .lineSpacing(33)
                     .frame(width: 280, height: 200, alignment: .topLeading)
@@ -65,6 +69,6 @@ struct LetterC: View {
 
 struct LetterC_Previews: PreviewProvider {
     static var previews: some View {
-        LetterC()
+        LetterC(user: UserData().userdata[0], imageC: 1)
     }
 }

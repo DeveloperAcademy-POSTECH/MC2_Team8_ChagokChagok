@@ -10,6 +10,12 @@
 		292863492A103F1200F8C48A /* ResetGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292863482A103F1100F8C48A /* ResetGoalView.swift */; };
 		2928634B2A10424D00F8C48A /* ResetGoalAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2928634A2A10424D00F8C48A /* ResetGoalAlertView.swift */; };
 		292B089A2A104ABE00B5B9A7 /* RenderingSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292B08992A104ABE00B5B9A7 /* RenderingSuccess.swift */; };
+		29573FF82A10BBB6003DAA8B /* 20-40.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 29573FF32A10BBB5003DAA8B /* 20-40.mp4 */; };
+		29573FF92A10BBB6003DAA8B /* 0-20.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 29573FF42A10BBB5003DAA8B /* 0-20.mp4 */; };
+		29573FFA2A10BBB6003DAA8B /* 80-100.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 29573FF52A10BBB5003DAA8B /* 80-100.mp4 */; };
+		29573FFB2A10BBB6003DAA8B /* 60-80.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 29573FF62A10BBB6003DAA8B /* 60-80.mp4 */; };
+		29573FFC2A10BBB6003DAA8B /* 40-60.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 29573FF72A10BBB6003DAA8B /* 40-60.mp4 */; };
+		29573FFE2A10D248003DAA8B /* LetterLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29573FFD2A10D248003DAA8B /* LetterLogic.swift */; };
 		297D4D5A2A0B593D000CD018 /* MC2_ChagokApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297D4D592A0B593D000CD018 /* MC2_ChagokApp.swift */; };
 		297D4D5E2A0B593E000CD018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 297D4D5D2A0B593E000CD018 /* Assets.xcassets */; };
 		297D4D612A0B593E000CD018 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 297D4D602A0B593E000CD018 /* Preview Assets.xcassets */; };
@@ -56,11 +62,12 @@
 		292863482A103F1100F8C48A /* ResetGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetGoalView.swift; sourceTree = "<group>"; };
 		2928634A2A10424D00F8C48A /* ResetGoalAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetGoalAlertView.swift; sourceTree = "<group>"; };
 		292B08992A104ABE00B5B9A7 /* RenderingSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderingSuccess.swift; sourceTree = "<group>"; };
-		292B089B2A10ABEC00B5B9A7 /* 40-60.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "40-60.mp4"; sourceTree = "<group>"; };
-		292B089C2A10ABEC00B5B9A7 /* 20-40.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "20-40.mp4"; sourceTree = "<group>"; };
-		292B089D2A10ABEC00B5B9A7 /* 0-20.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "0-20.mp4"; sourceTree = "<group>"; };
-		292B089E2A10ABEC00B5B9A7 /* 60-80.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "60-80.mp4"; sourceTree = "<group>"; };
-		292B089F2A10ABEC00B5B9A7 /* 80-100.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "80-100.mp4"; sourceTree = "<group>"; };
+		29573FF32A10BBB5003DAA8B /* 20-40.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "20-40.mp4"; sourceTree = "<group>"; };
+		29573FF42A10BBB5003DAA8B /* 0-20.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "0-20.mp4"; sourceTree = "<group>"; };
+		29573FF52A10BBB5003DAA8B /* 80-100.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "80-100.mp4"; sourceTree = "<group>"; };
+		29573FF62A10BBB6003DAA8B /* 60-80.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "60-80.mp4"; sourceTree = "<group>"; };
+		29573FF72A10BBB6003DAA8B /* 40-60.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "40-60.mp4"; sourceTree = "<group>"; };
+		29573FFD2A10D248003DAA8B /* LetterLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterLogic.swift; sourceTree = "<group>"; };
 		297D4D562A0B593D000CD018 /* MC2_Chagok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MC2_Chagok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		297D4D592A0B593D000CD018 /* MC2_ChagokApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC2_ChagokApp.swift; sourceTree = "<group>"; };
 		297D4D5D2A0B593E000CD018 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -142,6 +149,7 @@
 				297D4DBE2A0B7B73000CD018 /* MainView */,
 				297D4DCA2A0B7B73000CD018 /* DesignSystem */,
 				297D4DC72A0B7B73000CD018 /* UserData */,
+				297D4DDF2A0B7C4D000CD018 /* Video */,
 				297D4DDE2A0B7C0C000CD018 /* Sources */,
 				297D4D5D2A0B593E000CD018 /* Assets.xcassets */,
 				297D4D5F2A0B593E000CD018 /* Preview Content */,
@@ -275,7 +283,6 @@
 		297D4DDE2A0B7C0C000CD018 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				297D4DDF2A0B7C4D000CD018 /* Video */,
 				297D4DB52A0B7B73000CD018 /* EffectSources */,
 				297F7C9C2A0E11F10044B50C /* LottieAnimation */,
 			);
@@ -285,12 +292,12 @@
 		297D4DDF2A0B7C4D000CD018 /* Video */ = {
 			isa = PBXGroup;
 			children = (
-				292B089D2A10ABEC00B5B9A7 /* 0-20.mp4 */,
-				292B089C2A10ABEC00B5B9A7 /* 20-40.mp4 */,
-				292B089B2A10ABEC00B5B9A7 /* 40-60.mp4 */,
-				292B089E2A10ABEC00B5B9A7 /* 60-80.mp4 */,
-				292B089F2A10ABEC00B5B9A7 /* 80-100.mp4 */,
 				297D4DC12A0B7B73000CD018 /* VideoBackGroundView.swift */,
+				29573FF42A10BBB5003DAA8B /* 0-20.mp4 */,
+				29573FF32A10BBB5003DAA8B /* 20-40.mp4 */,
+				29573FF72A10BBB6003DAA8B /* 40-60.mp4 */,
+				29573FF62A10BBB6003DAA8B /* 60-80.mp4 */,
+				29573FF52A10BBB5003DAA8B /* 80-100.mp4 */,
 			);
 			path = Video;
 			sourceTree = "<group>";
@@ -301,6 +308,7 @@
 				297D4DED2A0BFB4E000CD018 /* LetterA.swift */,
 				297D4DEF2A0BFB65000CD018 /* LetterB.swift */,
 				297D4DF12A0BFB70000CD018 /* LetterC.swift */,
+				29573FFD2A10D248003DAA8B /* LetterLogic.swift */,
 			);
 			path = LetterView;
 			sourceTree = "<group>";
@@ -404,7 +412,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29573FFC2A10BBB6003DAA8B /* 40-60.mp4 in Resources */,
+				29573FF82A10BBB6003DAA8B /* 20-40.mp4 in Resources */,
 				297D4D612A0B593E000CD018 /* Preview Assets.xcassets in Resources */,
+				29573FF92A10BBB6003DAA8B /* 0-20.mp4 in Resources */,
+				29573FFB2A10BBB6003DAA8B /* 60-80.mp4 in Resources */,
+				29573FFA2A10BBB6003DAA8B /* 80-100.mp4 in Resources */,
 				297D4D5E2A0B593E000CD018 /* Assets.xcassets in Resources */,
 				297F7CA02A0E16E40044B50C /* popUpConfetti.json in Resources */,
 				297F7C902A0C976B0044B50C /* GangwonEduSaeeum.ttf in Resources */,
@@ -444,6 +457,7 @@
 				297D4DF02A0BFB65000CD018 /* LetterB.swift in Sources */,
 				297D4DDA2A0B7B73000CD018 /* UserDataManager.swift in Sources */,
 				297D4DDB2A0B7B73000CD018 /* Component.swift in Sources */,
+				29573FFE2A10D248003DAA8B /* LetterLogic.swift in Sources */,
 				297D4DEE2A0BFB4E000CD018 /* LetterA.swift in Sources */,
 				297D4DCE2A0B7B73000CD018 /* RoundedCross.swift in Sources */,
 				297D4DE92A0BFA51000CD018 /* FailPopupView.swift in Sources */,

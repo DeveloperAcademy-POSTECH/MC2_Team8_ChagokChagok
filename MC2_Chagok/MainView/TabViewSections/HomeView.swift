@@ -22,17 +22,20 @@ struct HomeView: View {
             Color.appBeige
                 .ignoresSafeArea()
             VStack {
-                postboxImageName(userData: userData, goalMoney: goalMoney)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 390)
-//                VideoBackGroundView()
                 
+                VideoBackGroundView(userdata: $userData)
+                    .frame(height: 390)
+                
+                /// 기존에 사용했던 postbox image
+                //                postboxImageName(userData: userData, goalMoney: goalMoney)
+                //                    .resizable()
+                //                    .scaledToFit()
+                //                    .frame(height: 390)
                 /// 애니메이션
-//                    .onTapGesture {
-//                        counter += 1
-//                    }
-//                    .confettiCannon(counter: $counter)
+                //                    .onTapGesture {
+                //                        counter += 1
+                //                    }
+                //                    .confettiCannon(counter: $counter)
                 
                 Spacer()
                 Spacer()

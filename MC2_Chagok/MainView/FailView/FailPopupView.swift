@@ -31,7 +31,8 @@ struct FailPopupView: View {
                     .foregroundColor(.pink)
                     .padding(.vertical, 20)
                 Text("너무 아쉬워요!\n하지만 편지들은 사라지지 않아요\n다시 한번 도전해보세요!")
-                    .font(.headline)
+                    .font(.title3)
+                    .bold()
                     .multilineTextAlignment(.center)
                     .padding(.bottom, 40)
                 

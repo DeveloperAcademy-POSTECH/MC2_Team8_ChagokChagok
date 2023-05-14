@@ -54,11 +54,11 @@ struct MainView: View {
             .onAppear {
                 userData = UserData()
             }
-            .blur(radius: userData.total == UserDefaults.standard.integer(forKey: "realGoalMoney") ? 0.5 : 0)
+            .blur(radius: userData.total == UserDefaults.standard.integer(forKey: "realGoalMoney") ? 2 : 0)
             if userData.total == UserDefaults.standard.integer(forKey: "realGoalMoney") {
                 SuccessPopUpView()
             }
-            if dday > 0 && UserDefaults.standard.integer(forKey: "realGoalMoney") - userData.total < 0 {
+            if dday < 0 && UserDefaults.standard.integer(forKey: "realGoalMoney") - userData.total > 0 {
                 FailPopupView()
             }
         }

@@ -13,6 +13,11 @@ struct LetterA: View {
     guard let image = ImageRenderer(content: body).uiImage
     */
      
+    @State var userData = UserData()
+    let user: User
+    let imageA: Int
+
+    
     var body: some View {
         ZStack{
             Image("PostBackground")
@@ -32,7 +37,7 @@ struct LetterA: View {
                 
                 HStack{
                     // Data - Question
-                    Text("스위프트를 처음 만났을 때 나의 감정은?")
+                    Text("\(user.question)")
                         .font(.custom("GangwonEduSaeeum", size: 22))
                         .frame(width: 280, alignment: .leading)
                 }
@@ -42,7 +47,7 @@ struct LetterA: View {
                     .frame(height: 30)
                 
                 // Data - Contents
-                Text("찾아다녀도, 어디 끓는 구하지 아니다. 찬미를 청춘을 생명을 영원히 인류의 봄바람이다. 끓는 든 길을 크고 소금이라 관현악이며, 반짝이는 할지니. 그렇지 아니한가?")
+                Text("\(user.message)")
                     .font(.custom("GangwonEduSaeeum", size: 20))
                     .lineSpacing(33)
                     .frame(width: 280, height: 200, alignment: .topLeading)
@@ -53,7 +58,7 @@ struct LetterA: View {
                 
                 HStack{
                     // Data - Image
-                    Image("Image")
+                    Image("\(imageA)")
                 }
                 .frame(minHeight: 0)
             }
@@ -66,6 +71,6 @@ struct LetterA: View {
 
 struct LetterA_Previews: PreviewProvider {
     static var previews: some View {
-        LetterA()
+        LetterA(user: UserData().userdata[0], imageA: 1)
     }
 }

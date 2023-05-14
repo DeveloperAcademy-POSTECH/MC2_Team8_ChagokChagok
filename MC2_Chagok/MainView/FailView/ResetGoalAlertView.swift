@@ -14,6 +14,9 @@ struct ResetGoalAlertView: View {
     @Binding var goalDay: Date
     @Binding var navigateSuccessView: Bool
     
+    @State private var goalClearCount: Int = UserDefaults.standard.integer(forKey: "GoalClearCount")
+    @State private var allTotalMoney: Int = UserDefaults.standard.integer(forKey: "AllTotalMoney")
+    
     var body: some View {
         let dateFormatter: DateFormatter = {
             let formatter = DateFormatter()
@@ -61,6 +64,12 @@ struct ResetGoalAlertView: View {
                         goalMoney = ""
                         goalDay = Date()
                         resetGoalAlertView = false
+                        
+                        allTotalMoney += UserDefaults.standard.integer(forKey: "AllTotalMoney")
+                        UserDefaults.standard.set(allTotalMoney, forKey: "AllTotalMoney")
+                        
+                        goalClearCount += 1
+                        UserDefaults.standard.set(goalClearCount, forKey: "GoalClearCount")
                         
                         UserDefaults.standard.removeObject(forKey: "userData")
                     }

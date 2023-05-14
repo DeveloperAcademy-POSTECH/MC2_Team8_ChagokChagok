@@ -72,7 +72,7 @@ func postboxVideo(userData: UserData, goalMoney: Int) -> String {
 // MARK: KoreanNumber Converter
 
 func koreanNumber(_ number: Int) -> String {
-    let koreanNumbers = ["", "이", "삼", "사", "오", "육", "칠", "팔", "구"]
+    let koreanNumbers = ["첫번째", "두번째", "세번째", "네번째", "다섯번째", "여섯번째", "일곱번째", "여덟번째", "아홉번째"]
     
     if number < 1 || number > 9 {
         return "숫자를 추가해주세요"
