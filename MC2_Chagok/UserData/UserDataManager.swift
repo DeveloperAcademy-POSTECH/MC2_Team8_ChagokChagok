@@ -83,7 +83,7 @@ struct Question {
     }
     
     // MARK: Guiding Question by.Bently :)
-    /// Tip: 그냥 chat-GPT한테 \(swift), \(tyler) 로 바꿔달라고 하면 쭉 바꿔줍니다.
+    
     var question: [String] {
         [
             "\(swift)를 처음 만났을 때 나의 감정은?",

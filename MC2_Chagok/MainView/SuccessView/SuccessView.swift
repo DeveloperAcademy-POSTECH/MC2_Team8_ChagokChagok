@@ -9,14 +9,33 @@ import SwiftUI
 
 struct SuccessView: View {
     @State private var renderedImage: Image?
-    @Binding var navigateSuccessView: Bool
+    @State private var renderingSuccess = false
     
+    @Binding var navigateSuccessView: Bool
+        
     var body: some View {
         ZStack {
             Color.appBeige.ignoresSafeArea()
             VStack {
-                CustomButton(label: "저장하기", disable: true) {
-                    
+                Text("축하드려요!\nSwift님에게 편지를 선물하세요")
+                    .font(.title2)
+                    .bold()
+                    .padding(.vertical, 50)
+                    .lineSpacing(5)
+                    .frame(width: 320, alignment: .leading)
+                    HStack {
+                        Rectangle()
+                            .frame(width: 200, height: 400)
+                        Rectangle()
+                            .frame(width: 200, height: 400)
+                        Rectangle()
+                            .frame(width: 200, height: 400)
+                    }
+                    .gesture(DragGesture()
+                             
+                    )
+                CustomButton(label: "저장하기", disable: false) {
+                    renderingSuccess = true
                     
                     /// 저장 기능
 //                    checkPhotoLibraryAuthorization {
@@ -32,6 +51,12 @@ struct SuccessView: View {
 //                            }
 //                        }
 //                    }
+                }
+                .padding(.bottom, 20)
+            }
+            .overlay {
+                if renderingSuccess == true {
+                    RenderingSuccess(navigateSuccessView: $navigateSuccessView)
                 }
             }
         }

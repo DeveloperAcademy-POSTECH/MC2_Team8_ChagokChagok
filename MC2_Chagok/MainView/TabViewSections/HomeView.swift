@@ -26,6 +26,7 @@ struct HomeView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(height: 390)
+//                VideoBackGroundView()
                 
                 /// 애니메이션
 //                    .onTapGesture {

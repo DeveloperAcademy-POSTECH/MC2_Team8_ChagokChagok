@@ -58,7 +58,7 @@ struct MainView: View {
             if userData.total == UserDefaults.standard.integer(forKey: "realGoalMoney") {
                 SuccessPopUpView()
             }
-            if dday < 0 && UserDefaults.standard.integer(forKey: "realGoalMoney") - userData.total > 0 {
+            if dday > 0 && UserDefaults.standard.integer(forKey: "realGoalMoney") - userData.total < 0 {
                 FailPopupView()
             }
         }

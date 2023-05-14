@@ -1,16 +1,15 @@
 //
-//  FailPopupView.swift
+//  RenderingSuccess.swift
 //  MC2_Chagok
 //
-//  Created by hyunjun kim on 2023/05/11.
+//  Created by hyunjun kim on 2023/05/14.
 //
 
 import SwiftUI
 
-struct FailPopupView: View {
-    
+struct RenderingSuccess: View {
     @State var navigateResetGoalView = false
-    @State var navigateSuccessView = true
+    @Binding var navigateSuccessView: Bool
     
     var body: some View {
         ZStack{
@@ -24,13 +23,16 @@ struct FailPopupView: View {
                 .frame(width: 320, height: 320)
                 .cornerRadius(20)
                 .shadow(radius: 10, x: 0, y: 10)
+            
+            lottieView(name: "popUpConfetti", loopMode: .loop)
+            
             VStack{
-                Text("⌛️")
+                Text("🎉")
                     .font(.system(size: 40))
                     .imageScale(.large)
                     .foregroundColor(.pink)
                     .padding(.vertical, 20)
-                Text("너무 아쉬워요!\n하지만 편지들은 사라지지 않아요\n다시 한번 도전해보세요!")
+                Text("성공적으로 편지를\n앨범과 내폴더에 저장했어요\n목표를 다시 설정해 주세요.")
                     .font(.headline)
                     .multilineTextAlignment(.center)
                     .padding(.bottom, 40)
@@ -38,7 +40,7 @@ struct FailPopupView: View {
                 Button {
                     navigateResetGoalView = true
                 } label: {
-                    Text("목표 재설정하러 가기")
+                    Text("목표 다시 설정하기")
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
                         .frame(width: 260, height: 60)
@@ -56,8 +58,8 @@ struct FailPopupView: View {
     }
 }
 
-struct FailPopupView_Previews: PreviewProvider {
+struct RenderingSuccess_Previews: PreviewProvider {
     static var previews: some View {
-        FailPopupView()
+        RenderingSuccess(navigateSuccessView: .constant(true))
     }
 }

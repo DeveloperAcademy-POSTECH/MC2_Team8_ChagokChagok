@@ -1,30 +1,28 @@
 //
-//  GoalSettingView.swift
-//  ChagokChagok
+//  UserGoalSettingAgainView.swift
+//  MC2_Chagok
 //
-//  Created by 김현준 on 2023/05/08.
+//  Created by hyunjun kim on 2023/05/14.
 //
 
 import SwiftUI
 
-struct UserGoalSettingView: View {
+struct ResetGoalView: View {
     @State private var goalMoney = ""
     @State private var goalDay = Date()
     @State private var showPicker = false
+    @Binding var navigateSuccessView: Bool
     
-    @State var userAlertView = false
-    @State var navigateContentView = false
-    @Binding var navigateGoalSettingView: Bool
+    @State var resetGoalAlertView = false
+    @Binding var navigateResetGoalView: Bool
     
     @FocusState var goalMoneyfocus: Bool
-    @FocusState var datePicker: Bool
     
     var body: some View {
-                
         ZStack {
             Color.appBeige.ignoresSafeArea()
             VStack(alignment: .leading) {
-                Text(goalDay.timeIntervalSinceNow < 0 ? "언제까지 모아야 하나요?" : "얼마를 모아야 하나요?")
+                Text("목표를 다시 설정해 주세요")
                     .frame(width: 320, alignment: .leading)
                     .fontWeight(.bold)
                     .font(.title)
@@ -37,7 +35,6 @@ struct UserGoalSettingView: View {
                         .padding(.top)
                     DatePicker(selection: $goalDay, in: Date.now..., displayedComponents: .date) {
                     }
-                    .focused($datePicker)
                     .frame(width: 110, height: 50)
                 }
                 .padding(.bottom)
@@ -87,16 +84,13 @@ struct UserGoalSettingView: View {
             }
             .ignoresSafeArea(.keyboard)
             .tint(.appRed)
-//            .navigationDestination(isPresented: $navigateContentView) {
-//                MainView()
-//            }
             
             /// 네비게이션 바 Back Button Custom
             .navigationBarBackButtonHidden()
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
-                        navigateGoalSettingView = false
+                        navigateResetGoalView = false
                     } label: {
                         Image(systemName: "chevron.backward")
                             .bold()
@@ -108,7 +102,7 @@ struct UserGoalSettingView: View {
                 Spacer()
                 if !goalMoney.isEmpty && Int(goalMoney) ?? 0 > 0 && goalDay.timeIntervalSinceNow > 0 {
                     CustomLongButton(label: "시작하기", disable: false) {
-                        userAlertView = true
+                        resetGoalAlertView = true
                         goalMoneyfocus = false
                     }
                 }
@@ -129,14 +123,14 @@ struct UserGoalSettingView: View {
         
         // MARK: UserAlertView 창 띄우기
         
-        .fullScreenCover(isPresented: $userAlertView) {
-            UserAlertView(userAlertView: $userAlertView, navigateContentView: $navigateContentView, goalMoney: $goalMoney, goalDay: $goalDay)
+        .fullScreenCover(isPresented: $resetGoalAlertView) {
+            ResetGoalAlertView(resetGoalAlertView: $resetGoalAlertView, navigateResetGoalView: $navigateResetGoalView, goalMoney: $goalMoney, goalDay: $goalDay, navigateSuccessView: $navigateSuccessView)
         }
     }
 }
 
-struct UserGoalSettingView_Previews: PreviewProvider {
+struct ResetGoalView_Previews: PreviewProvider {
     static var previews: some View {
-        UserGoalSettingView(navigateGoalSettingView: .constant(true))
+        ResetGoalView(navigateSuccessView: .constant(true), navigateResetGoalView: .constant(true))
     }
 }
