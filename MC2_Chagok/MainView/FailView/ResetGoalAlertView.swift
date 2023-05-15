@@ -48,7 +48,7 @@ struct ResetGoalAlertView: View {
                 Spacer()
                 
                 VStack(spacing: 10) {
-                    CustomBeigeButton(label: "다시보기", disable: false) {
+                    CustomBeigeButton(label: "다시 수정하기", disable: false) {
                         resetGoalAlertView = false
                     }
                     

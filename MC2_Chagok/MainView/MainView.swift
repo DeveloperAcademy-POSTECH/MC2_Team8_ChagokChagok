@@ -18,6 +18,7 @@ struct MainView: View {
     @State var userData = UserData()
     @State var dday = Calculate.Dday(to: UserDefaults.standard.object(forKey: "realGoalDay") as? Date ?? Date())
     @State private var selection = 0
+    @State private var goalClearCount: Int = UserDefaults.standard.integer(forKey: "GoalClearCount")
     
     
     var body: some View {
@@ -54,8 +55,8 @@ struct MainView: View {
             .onAppear {
                 userData = UserData()
             }
-            .blur(radius: userData.total == UserDefaults.standard.integer(forKey: "realGoalMoney") ? 2 : 0)
-            if userData.total == UserDefaults.standard.integer(forKey: "realGoalMoney") {
+            .blur(radius: userData.total == UserDefaults.standard.integer(forKey: "realGoalMoney") && UserDefaults.standard.integer(forKey: "GoalClearCount") == 0 ? 2 : 0)
+            if userData.total == UserDefaults.standard.integer(forKey: "realGoalMoney") && UserDefaults.standard.integer(forKey: "GoalClearCount") == 0 {
                 SuccessPopUpView()
             }
             if dday < 0 && UserDefaults.standard.integer(forKey: "realGoalMoney") - userData.total > 0 {

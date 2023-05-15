@@ -32,15 +32,15 @@ struct RenderingSuccess: View {
                     .imageScale(.large)
                     .foregroundColor(.pink)
                     .padding(.vertical, 20)
-                Text("성공적으로 편지를\n앨범과 내폴더에 저장했어요!\n목표를 다시 설정해 주세요")
+                Text("성공적으로 편지를\n앨범과 내폴더에 저장했어요!")
                     .font(.headline)
                     .multilineTextAlignment(.center)
                     .padding(.bottom, 40)
                 
                 Button {
-                    navigateResetGoalView = true
+                    navigateSuccessView = false
                 } label: {
-                    Text("목표 다시 설정하기")
+                    Text("메인화면으로 돌아가기")
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
                         .frame(width: 260, height: 60)

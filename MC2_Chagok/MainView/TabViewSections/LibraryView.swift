@@ -18,7 +18,7 @@ struct LibraryView: View {
                 .ignoresSafeArea()
             VStack(alignment: .leading) {
                 VStack(alignment: .leading) {
-                    Text("내가 목표 달성 기록들")
+                    Text("내 목표 달성 기록들")
                         .font(.title)
                         .bold()
                         .padding(.top, 50)

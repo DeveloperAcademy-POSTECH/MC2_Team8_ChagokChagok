@@ -45,7 +45,7 @@ struct SaveAlertView: View {
                 // MARK: 아래 버튼
                 
                 VStack(spacing: 10) {
-                    CustomBeigeButton(label: "다시보기", disable: false) {
+                    CustomBeigeButton(label: "수정하기", disable: false) {
                         saveAlertView = false
                     }
                     CustomButton(label: "채우기", disable: false) {

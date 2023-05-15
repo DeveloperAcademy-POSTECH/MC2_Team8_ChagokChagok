@@ -41,6 +41,7 @@ struct SuccessPopUpView: View {
                 
                 Button {
                     navigateSuccessView = true
+                    UserDefaults.standard.set(1, forKey: "GoalClearCount")
                 } label: {
                     Text("편지 보내러 가기")
                         .fontWeight(.semibold)

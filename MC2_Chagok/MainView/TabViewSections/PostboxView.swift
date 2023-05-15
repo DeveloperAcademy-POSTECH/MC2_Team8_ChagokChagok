@@ -89,6 +89,11 @@ struct MessageCard: View {
                         .padding(.top)
             }
         }
+        .onTapGesture {
+            withAnimation {
+                open.toggle()
+            }
+        }
         
         .onAppear {
             userData = UserData()

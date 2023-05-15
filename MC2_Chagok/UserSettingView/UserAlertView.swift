@@ -42,11 +42,11 @@ struct UserAlertView: View {
                 Image("UserAlert")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 330, height: 130, alignment: .center)
+                    .frame(width: 330, height: 100, alignment: .center)
                 Spacer()
                 
                 VStack(spacing: 10) {
-                    CustomBeigeButton(label: "다시보기", disable: false) {
+                    CustomBeigeButton(label: "다시 설정하기", disable: false) {
                         userAlertView = false
                     }
                     
